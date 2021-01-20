@@ -116,6 +116,7 @@ export default function SystemCinema(props) {
                   <NavLink
                     className="systemCinema__showTime--item"
                     to={`/chitietphongve/${st.maLichChieu}`}
+                    // target="_blank"
                     key={index}
                   >
                     {moment(st.ngayChieuGioChieu).format("hh:mm A")}
@@ -157,6 +158,7 @@ export default function SystemCinema(props) {
                 <NavLink
                   className="systemCinema__showTime--item"
                   to={`/chitietphongve/${st.maLichChieu}`}
+                  // target="_blank"
                   key={index}
                 >
                   {moment(st.ngayChieuGioChieu).format("hh:mm A")}

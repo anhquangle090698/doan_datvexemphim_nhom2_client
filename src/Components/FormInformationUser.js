@@ -10,24 +10,12 @@ import {
 } from "../redux/actions/ManageUserReducerAction";
 
 export default function FormInformationUser(props) {
-  const { informationAccount, informationUserSignIn } = useSelector(
+  const { informationAccount } = useSelector(
     (state) => state.StateManageUser
   );
 
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetchDataSCinema = async () => {
-      dispatch(
-        await postInformationAccountApiAction({
-          taiKhoan: informationUserSignIn.taiKhoan,
-        })
-      );
-    };
-
-    fetchDataSCinema();
-  }, []);
-
+  
   // console.log(informationAccount);
 
   const initialValues = {

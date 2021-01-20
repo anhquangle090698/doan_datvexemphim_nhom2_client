@@ -2,6 +2,7 @@
 
     position: relative;
     width: 100%;
+    min-height: 100vh;
 
     .ticket__chooseChair {
 
@@ -10,13 +11,13 @@
 
         padding: 70px 0;
 
-        .ticket__information {
+        .ticket__content {
             display: flex;
             justify-content: space-between;
             
             width: 80%;
 
-            .ticket__information--left {
+            .ticket__cinema {
                 h3 {
                     @include styleText($color-green-0, $fs-20, $fw-400);
                 }
@@ -27,7 +28,7 @@
                     font-style: italic;
                 }
             }
-            .ticket__information--right {
+            .ticket__timer {
                 h3 {
                     @include styleText($color-orange-1, $fs-30, $fw-700);
                 }
@@ -57,16 +58,37 @@
                     top: -30%;
                     left: 35%;
         
-                    @include styleText($color-black-1, $fs-10, $fw-400);
+                    @include styleText($color-black-0, $fs-10, $fw-400);
                 }
 
                 .number__chairVip {
                     color: $color-orange-2;
                 }
+
+                .number__chairBooking {
+                    color : #25a55f;
+                }
+
+                .number__chairBooked {
+                    color : #d72323;
+                }
+
+                &.disabled {
+                    cursor: no-drop !important;
+                    pointer-events: none;
+                }
             }
 
             .chairVip {
                 fill: $color-orange-2;
+            }
+
+            .chairBooking {
+                fill : #25a55f;
+            }
+            
+            .chairBooked {
+                fill : #d72323;
             }
         
             .ticket__diagram--character {
@@ -82,9 +104,195 @@
                 height: 20px;
             }
         }
+
+        .ticket__diagram--note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 80%;
+            margin-top: $mg-30;
+
+            .note__chair--normal {
+
+                width: 150px;
+
+                .note__chair--small {
+                    text-align: center;
+    
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    &.normal {
+                        fill : $color-black-0;
+                    }
+
+                    &.booking {
+                        fill:  #25a55f;
+                    }
+
+                    &.booked {
+                        fill: #d72323;
+                    }
+
+                    &.vip {
+                        fill: $color-orange-2;
+                    }
+                }
+    
+                .note__chair--title {
+                    @include styleText($color-black-1, $fs-10 + 2, $fw-400);
+                    
+                    text-align: center;
+                }
+            }
+        }        
+    }
+    
+    .ticket__checkout {
+
+        width: 100%;
+        height: 100%;
+
+        margin: $mg-5 auto;
+        padding: 70px $pd-40;
+
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+
+        .ticket__totalPrice {
+            @include styleText($color-green-0, $fs-30 + 5, $fw-700);
+            
+            text-align: center;
+
+            padding-bottom: $pd-20;
+            border-bottom: 1.5px dashed $color-gray-2;
+
+        }
+
+        .ticket__information {
+            display: flex;
+
+            padding: $pd-30 0;
+            border-bottom: 1.5px dashed $color-gray-2;
+
+            .ticket__information--image {
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 80px;
+
+                    object-fit: cover;
+                }
+            }
+
+            .ticket__information--detail {
+
+                margin-left: $mg-20;
+                
+                .information__nameFilm {
+                    @include styleText($color-green-0, $fs-20 + 5, $fw-700);
+
+                    text-align: center;
+                }
+
+                .information__nameSystemCinema {
+                    @include styleText($color-black-0, $fs-12 + 2, $fw-400);
+                    
+                    margin-top: $mg-20;
+                }
+
+                .information__daytime {
+                    @include styleText($color-black-0, $fs-12 + 2, $fw-400);
+                }
+            }
+        }
+
+        .ticket__listChair {
+                @include styleText($color-green-0, $fs-16, $fw-700);
+            
+                padding: $pd-20 0;
+                border-bottom: 1.5px dashed $color-gray-2;
+
+            .ticket__chair {
+                @include styleText($color-green-0, $fs-16, $fw-400); 
+            }
+        }
+
+        .ticket__notify {
+
+            margin-top: 80px;
+            text-align: center;
+
+            img {
+                width: 15px;
+                height: 15px;
+
+                margin-bottom: $mg-5;
+            }
+
+            span {
+                @include styleText($color-black-0, $fs-12 + 2, $fw-400);
+
+                margin-left: $mg-10;
+            }
+        }
+
+        .ticket__confirm {
+
+            margin-top: $mg-30;
+
+            text-align: center;
+
+
+            .button__confirm {
+                @include styleButton($color-green-0, 8px, $pd-10, $pd-45);
+
+                outline: none;
+                border: none;
+
+                color: $color-white-0;
+            }
+        }
     }
 
+    .ticket__timeout {
+        position: fixed;
+        top: 0;
+        left: 0;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba($color: #000000, $alpha: .5);
+
+        .timeout__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 700px;
+            height: 80px;
+
+            background-color: $color-white-0;
+
+            border-radius: 5px;
+
+            .timeout__title {
+                @include styleText($color-black-1, $fs-12 + 2, $fw-700);
+
+                letter-spacing: .5px;
+
+                .timeout__rebook {
+                    @include styleText(#d72323, $fs-12 + 2, $fw-700);
+                }
+            }
+        }
+    }
 }

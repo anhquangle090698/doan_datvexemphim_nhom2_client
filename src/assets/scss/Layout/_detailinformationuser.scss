@@ -150,6 +150,14 @@
             }
         }
     }
+
+    .information__booking {
+        margin-top: $mg-10;
+
+        table {
+            cursor: pointer;
+        }
+    }
 }
 
 @keyframes bounce {

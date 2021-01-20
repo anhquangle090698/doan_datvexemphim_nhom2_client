@@ -150,6 +150,7 @@ export default function DetailFilm(props) {
                                       <NavLink
                                         className="detailFilm__showTime--item"
                                         to={`/chitietphongve/${lichChieu.maLichChieu}`}
+                                        // target="_blank"
                                         key={index}
                                       >
                                         {moment(

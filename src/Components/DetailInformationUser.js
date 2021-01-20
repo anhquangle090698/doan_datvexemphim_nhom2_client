@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "../assets/scss/main.scss";
+import { postInformationAccountApiAction } from "../redux/actions/ManageUserReducerAction";
 import FormInformationUser from "./FormInformationUser";
+import InformationBooking from "./InformationBooking";
 
 export default function DetailInformationUser(props) {
+
+  const { informationUserSignIn } = useSelector(
+    (state) => state.StateManageUser
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchDataSCinema = async () => {
+      dispatch(
+        await postInformationAccountApiAction({
+          taiKhoan: informationUserSignIn.taiKhoan,
+        })
+      );
+    };
+
+    fetchDataSCinema();
+  }, []);
+
   return (
     <>
       <div className="nav__content">
@@ -47,7 +69,7 @@ export default function DetailInformationUser(props) {
             role="tabpanel"
             aria-labelledby="nav-profile-tab"
           >
-           asdas
+           <InformationBooking></InformationBooking>
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import Axios from "axios"
-import { GET_DETAIL_MOVIE_BY_ID_FILM, GET_ALL_FILM_ACTION, GET_ALL_SYSTEM_CINEMA_ACTION, GET_SHOW_TIMES_BY_ID_CINEMA_ACTION, GET_SHOW_TIMES_BY_ID_SYSTEM_CINEMA_ACTION, GET_DETAIL_TICKET_ROOM_BY_ID_SHOW_TIMES } from "../constants/ManageFilmConst";
+import Swal from "sweetalert2";
+import { ACCESS_TOKEN } from "../../Util/config";
+import { GET_DETAIL_MOVIE_BY_ID_FILM, GET_ALL_FILM_ACTION, GET_ALL_SYSTEM_CINEMA_ACTION, GET_SHOW_TIMES_BY_ID_CINEMA_ACTION, GET_SHOW_TIMES_BY_ID_SYSTEM_CINEMA_ACTION, GET_DETAIL_TICKET_ROOM_BY_ID_SHOW_TIMES, HANDLE_CHAIR_BOOKING, HANDLE_CHAIR_BOOKED_SUCCESS } from "../constants/ManageFilmConst";
 
 //action gọi api lấy danh sách phim (không dispatch trực tiếp lên reducer)
 export const getAllFilmApiAction = async () => {
@@ -97,6 +99,39 @@ export const getDetailTicketRoomByIdShowTimeApiAction = async (maLichChieu) => {
     }
 }
 
+//action gọi api quản lý đặt vé
+export const postManageBookingApiAction = async (informationTicket) => {
+    return async (dispatch) => {
+        
+        try {
+            
+            let result = await Axios({
+                url : 'https://movie0706.cybersoft.edu.vn/api/QuanLyDatVe/DatVe',
+                method : 'POST',
+                data : informationTicket,
+                headers : {
+                    'Authorization' : 'Bearer ' + localStorage.getItem(ACCESS_TOKEN),
+                }
+            });
+
+            // console.log(result.data);
+
+            dispatch(await getDetailTicketRoomByIdShowTimeApiAction(informationTicket.maLichChieu));
+            dispatch(await handleChairBookedSuccessAction());
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Đặt Vé Thành Công!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+        } catch (response) {
+            console.log(response.data.error);
+        }
+    }
+}
+
 //Action dispatch reducer
 export const getAllFilmAction = (dataFilm) => {
     return {
@@ -137,5 +172,19 @@ export const getDetailTicketRoomByIdShowTimeAction = (detailTicketRoom) => {
     return {
         type : GET_DETAIL_TICKET_ROOM_BY_ID_SHOW_TIMES,
         payload : detailTicketRoom,
+    }
+}
+
+
+export const handleChairBookingAction = (chairBooking) => {
+    return {
+        type : HANDLE_CHAIR_BOOKING,
+        payload : chairBooking,
+    }
+}
+
+export const handleChairBookedSuccessAction = () => {
+    return {
+        type : HANDLE_CHAIR_BOOKED_SUCCESS,
     }
 }
