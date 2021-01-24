@@ -115,7 +115,7 @@ export default function SystemCinema(props) {
                 return (
                   <NavLink
                     className="systemCinema__showTime--item"
-                    to={`/chitietphongve/${st.maLichChieu}`}
+                    to={`/chi-tiet-phong-ve/${st.maLichChieu}`}
                     // target="_blank"
                     key={index}
                   >
@@ -157,7 +157,7 @@ export default function SystemCinema(props) {
               return (
                 <NavLink
                   className="systemCinema__showTime--item"
-                  to={`/chitietphongve/${st.maLichChieu}`}
+                  to={`/chi-tiet-phong-ve/${st.maLichChieu}`}
                   // target="_blank"
                   key={index}
                 >

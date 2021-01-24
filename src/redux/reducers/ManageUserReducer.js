@@ -23,7 +23,7 @@ const ManageUserReducer = (state = stateInit, action) => {
     case POST_INFORMATION_ACCOUNT : {
       state.informationAccount = action.payload;
 
-      return { ...state }
+      return { ...state };
     }
 
     default:

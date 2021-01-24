@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import news1 from "../assets/images/news-450-subu.jpg";
+import news1 from "../assets/images/news-450-diet-quy.jpg";
 import news2 from "../assets/images/news-450-crood.jpg";
 import news3 from "../assets/images/news-tiectrangmau450x300.jpg";
 import news4 from "../assets/images/news-450-trai-tim.jpg";
-import news5 from "../assets/images/news-450-ke.jpg";
-import news6 from "../assets/images/news-450-kieu-chuan.jpg";
-import news7 from "../assets/images/news-450-quai.jpg";
-import news8 from "../assets/images/news-450-tron-chay.jpg";
+import news5 from "../assets/images/news-450-doanh-thu.png";
+import news6 from "../assets/images/news-450-pixal.png";
+import news7 from "../assets/images/news-450-dead-pool.png";
+import news8 from "../assets/images/news-450-bay-cuu.jpg";
 import "../assets/scss/main.scss";
 
 export default function News(props) {
@@ -22,7 +22,7 @@ export default function News(props) {
             <div className="news__content">
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/preview-demon-slayer-diet-gon-khuong-tu-nha-tren-bang-doanh-thu-phong-ve-toan-cau">
                     <img
                       className="news__item--image"
                       src={news1}
@@ -31,7 +31,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/preview-demon-slayer-diet-gon-khuong-tu-nha-tren-bang-doanh-thu-phong-ve-toan-cau">
                     <h3 className="news__item--title">
                       [Review] Demon Slayer: "Diệt Gọn" Khương Tử Nha Trên Bảng
                       Doanh Thu Phòng Vé Toàn Cầu
@@ -147,17 +147,11 @@ export default function News(props) {
                 <div className="news__item--blockText">
                   <NavLink to="/">
                     <h3 className="news__item--title">
-                      Kẻ Rình Mồi: Cái Ác Luôn Rình Rập
+                      Những Cái Tên Bảo Chứng Doanh Thu Phòng Vé Tại Việt Nam
                     </h3>
                   </NavLink>
                   <p className="news__item--subtitle">
-                    <b>
-                      {" "}
-                      <i> Kẻ Rình Mồi </i>
-                    </b>
-                    là bộ phim tâm lý kinh dị năm 2020 của đạo diễn John Hyams,
-                    xoay quanh những ám ảnh và nguy hiểm luôn tiềm ẩn hoặc hiện
-                    diện từ những con người xa lạ và tỏ ra vô hại.
+                  Tại Hollywood, Tom Cruise, Dwayne Johnson hay Leonardo DiCaprio được coi là những ông hoàng phòng vé. Chỉ cần nhìn tên diễn viên, khán giả sẽ ùn ùn kéo ra rạp. Ở Việt Nam, ngôi sao nào có khả năng bảo chứng doanh thu tương tự? 
                   </p>
                 </div>
               </div>
@@ -174,13 +168,11 @@ export default function News(props) {
                 <div className="news__item--blockText">
                   <NavLink to="/">
                     <h3 className="news__item--title">
-                      Kiều: Hoạn Thư Chính Thức Lộ Diện Với Tạo Hình Đầy Sắc Sảo
+                      Pixar – Ngoại Lệ Duy Nhất Của Hollywood (P.2)
                     </h3>
                   </NavLink>
                   <p className="news__item--subtitle">
-                    Hoạn Thư – biểu tượng cho sự ghen tuông của người phụ nữ
-                    nhiều thế kỉ qua được nhà sản xuất phim điện ảnh “Kiều” tin
-                    tưởng giao cho diễn viên Cao Thái Hà.
+                  Không có ai đi xem một bộ phim vì nó được làm bởi Universal hay 20th Century Fox. Tuy nhiên, Pixar là ngoại lệ. Mọi người đều biết Pixar.
                   </p>
                 </div>
               </div>
@@ -197,17 +189,12 @@ export default function News(props) {
                 <div className="news__item--blockText">
                   <NavLink to="/">
                     <h3 className="news__item--title">
-                      Quái Đản: Kinh Dị Và Hài Hước Khi Sát Nhân Và Người Đẹp
-                      Hoán Đổi Thân Xác
+                      Black Panther 2 Khởi Quay Vào Mùa Hè 2021, Marvel Làm Deadpool 3 Với Ryan Reynolds
                     </h3>
                   </NavLink>
                   <p className="news__item--subtitle">
-                    <b>
-                      <i> Quái Đản </i>
-                    </b>
-                    là bộ phim kinh dị hài do hãng phim nổi tiếng Blumhouse sản
-                    xuất. Tác phẩm chứng tỏ sự xuất sắc và thu hút khi đạt số
-                    điểm 83% trên Rotten Tomatoes và 6.8/10 ở hệ thống IMDb.
+                    
+                    Như thường lệ, vào mỗi cuối tuần, hàng loạt tin tức mới xoay quanh các dự án của vũ trụ điện ảnh Marvel lại được đăng tải. Tất nhiên, chúng lại tiếp tục khiến “dân tình” phải đứng ngồi không yên vì quá háo hức, mong chờ…
                   </p>
                 </div>
               </div>
@@ -224,17 +211,14 @@ export default function News(props) {
                 <div className="news__item--blockText">
                   <NavLink to="/">
                     <h3 className="news__item--title">
-                      Trốn Chạy: Khi Tình Yêu Thương Mù Quáng Biến Thành Xiềng
-                      Xích
+                    Phim Kinh Điển: Sự Im Lặng Của Bầy Cừu – Tiếng Thét Đẫm Máu Và Gã Bác Sĩ Bệnh Hoạn
                     </h3>
                   </NavLink>
                   <p className="news__item--subtitle">
                     <b>
-                      <i> Trốn Chạy </i>
+                      <i> Sự Im Lặng Của Bầy Cừu </i>
                     </b>
-                    là phim mới thuộc thể loại kinh dị, tâm lý giật gân đầy hấp
-                    dẫn, được mang đến từ vị đạo diễn tài năng Aneesh Chaganty
-                    của Truy Tìm Tung Tích Ảo (Searching).
+                    là tuyệt phẩm đã chiến thắng “Big Five” tại Oscar năm 1992 với hầu hết các giải thưởng quan trọng nhất. Đồng thời cũng là phim kinh dị duy nhất tính đến thời điểm hiện tại được xướng tên ở hạng mục Phim Hay Nhất.
                   </p>
                 </div>
               </div>

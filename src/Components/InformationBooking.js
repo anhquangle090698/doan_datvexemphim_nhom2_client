@@ -91,7 +91,7 @@ export default function InformationBooking(props) {
   return (
     <>
       <div className="information__booking">
-        <table className="table table-primary table-striped table-hover">
+        <table className="table table-warning table-striped table-hover">
           <thead>
             <tr>
               <th scope="col">Số giao dịch</th>

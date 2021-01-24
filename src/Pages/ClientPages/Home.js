@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Carousel from "../../Components/Carousel";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
@@ -16,9 +16,15 @@ import {
   getAllSystemCinemaApiAction,
   getShowTimesByIdSystemCinemaApiAction,
 } from "../../redux/actions/ManageFilmReducerActions";
+import { postInformationAccountApiAction } from "../../redux/actions/ManageUserReducerAction";
 
 export default function Home(props) {
-  let dispatch = useDispatch();
+
+  const { informationUserSignIn } = useSelector(
+    (state) => state.StateManageUser
+  );
+
+  const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -55,6 +61,18 @@ export default function Home(props) {
     };
 
     fetchDataShowTimes();
+  }, []);
+
+  useEffect(() => {
+    const fetchDataSCinema = async () => {
+      dispatch(
+        await postInformationAccountApiAction({
+          taiKhoan: informationUserSignIn.taiKhoan,
+        })
+      );
+    };
+
+    fetchDataSCinema();
   }, []);
 
   return (

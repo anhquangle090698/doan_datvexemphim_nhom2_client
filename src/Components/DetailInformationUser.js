@@ -7,24 +7,6 @@ import InformationBooking from "./InformationBooking";
 
 export default function DetailInformationUser(props) {
 
-  const { informationUserSignIn } = useSelector(
-    (state) => state.StateManageUser
-  );
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetchDataSCinema = async () => {
-      dispatch(
-        await postInformationAccountApiAction({
-          taiKhoan: informationUserSignIn.taiKhoan,
-        })
-      );
-    };
-
-    fetchDataSCinema();
-  }, []);
-
   return (
     <>
       <div className="nav__content">
