@@ -51,7 +51,7 @@ export default function News(props) {
               </div>
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/review-gia-dinh-croods-ky-nguyen-moi--vui-nhon-nhung-sau-sac-va-nu-quyen-khong-he-suong">
                     <img
                       className="news__item--image"
                       src={news2}
@@ -60,7 +60,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/review-gia-dinh-croods-ky-nguyen-moi--vui-nhon-nhung-sau-sac-va-nu-quyen-khong-he-suong">
                     <h3 className="news__item--title">
                       [Review] Gia Đình Croods: Kỷ Nguyên Mới – Vui Nhộn Nhưng
                       Sâu Sắc Và Nữ Quyền Không Hề “Sượng”
@@ -79,7 +79,7 @@ export default function News(props) {
               </div>
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/review-tiec-trang-mau-hoi-tu-anh-tai">
                     <img
                       className="news__item--image"
                       src={news3}
@@ -88,7 +88,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/review-tiec-trang-mau-hoi-tu-anh-tai">
                     <h3 className="news__item--title">
                       [Review] Tiệc Trăng Máu: Hội Tụ Anh Tài
                     </h3>
@@ -102,7 +102,7 @@ export default function News(props) {
               </div>
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/review-trai-tim-quai-vat-khi-ac-quy-la-ke-luong-thien-bi-ton-thuong">
                     <img
                       className="news__item--image"
                       src={news4}
@@ -111,7 +111,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/binh-luan-phim/review-trai-tim-quai-vat-khi-ac-quy-la-ke-luong-thien-bi-ton-thuong">
                     <h3 className="news__item--title">
                       [Review] Trái Tim Quái Vật: Khi Ác Quỷ Là Kẻ Lương Thiện
                       Bị Tổn Thương

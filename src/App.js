@@ -2,6 +2,9 @@ import { lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import Authentication from "./Components/Authentication";
 import CommentFilm1 from "./Components/comment-film/CommentFilm1";
+import CommentFilm2 from "./Components/comment-film/CommentFilm2";
+import CommentFilm3 from "./Components/comment-film/CommentFilm3";
+import CommentFilm4 from "./Components/comment-film/CommentFilm4";
 import CommentFilmTemplate from "./Templates/CommentFilmTemplate";
 
 
@@ -31,7 +34,9 @@ function App() {
           <Authentication path="/chi-tiet-phong-ve/:maLichChieu" exact Component={SignInUp}></Authentication>
 
           <CommentFilmTemplate exact path='/binh-luan-phim/preview-demon-slayer-diet-gon-khuong-tu-nha-tren-bang-doanh-thu-phong-ve-toan-cau' Component={CommentFilm1}></CommentFilmTemplate>
-
+          <CommentFilmTemplate exact path='/binh-luan-phim/review-gia-dinh-croods-ky-nguyen-moi--vui-nhon-nhung-sau-sac-va-nu-quyen-khong-he-suong' Component={CommentFilm2}></CommentFilmTemplate>
+          <CommentFilmTemplate exact path='/binh-luan-phim/review-tiec-trang-mau-hoi-tu-anh-tai' Component={CommentFilm3}></CommentFilmTemplate>
+          <CommentFilmTemplate exact path='/binh-luan-phim/review-trai-tim-quai-vat-khi-ac-quy-la-ke-luong-thien-bi-ton-thuong' Component={CommentFilm4}></CommentFilmTemplate>
           <Redirect to="/"></Redirect>
         </Switch>
       </Suspense>

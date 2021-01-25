@@ -1,14 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../assets/scss/main.scss";
-import cmt1 from "../../assets/images/comment-film-1.jpg";
+import cmt3 from "../../assets/images/comment-film-3.jpeg";
+import cmt31 from "../../assets/images/comment-film-3.1.jpg";
 import news1 from "../../assets/images/news-450-diet-quy.jpg";
 import news2 from "../../assets/images/news-450-crood.jpg";
 import news3 from "../../assets/images/news-tiectrangmau450x300.jpg";
 import news4 from "../../assets/images/news-450-trai-tim.jpg";
 import { useSelector } from "react-redux";
 
-export default function CommentFilm1(props) {
+export default function CommentFilm3(props) {
   let { listFilm } = useSelector((state) => state.StateManageFilm);
 
   const renderFilmMore = () => {
@@ -52,127 +53,135 @@ export default function CommentFilm1(props) {
             <div className="commentFilm__left">
               <div className="commentFilm__content">
                 <h3 className="commentFilm__content--title">
-                  [Preview] Demon Slayer: "Diệt Gọn" Khương Tử Nha Trên Bảng
-                  Doanh Thu Phòng Vé Toàn Cầu
+                  [Review] Tiệc Trăng Máu: Hội Tụ Anh Tài
                 </h3>
                 <div className="content__text">
                   <p className="line__text">
-                    Trong năm 2020, khi phòng vé vô cùng ảm đạm vì đại dịch
-                    Covid-19, phim điện ảnh Demon Slayer: Kimetsu No Yaiba the
-                    Movie: Mugen Train thắng lớn ở Nhật Bản với hơn 20 triệu
-                    lượt người xem, thu về xấp xỉ 265 triệu $.
+                    Sau bao ngày chờ đợi, cuối cùng thì Tiệc Trăng Máu đã chính
+                    thức ra rạp. Cùng xem liệu bộ phim này có xứng đáng với kỳ
+                    vọng của khán giả không nhé.
                   </p>
                   <p className="line__text">
-                    Trong năm 2020, <em>Kimetsu No Yaiba</em> hiện diện khắp
-                    nơi, với hàng loạt vật phẩm ăn theo, gây sốt khắp thế giới.
-                  </p>
-                  <p className="line__text">
-                    <b>Thanh Gươm Diệt Quỷ</b> xuất sắc đánh bại các bậc đàn anh
-                    sừng sỏ như{" "}
-                    <i>Thám Tử Lừng Danh Conan, Doraemon, One Piece</i> ; thành
-                    tích ra phá vỡ kỷ lục tồn tại suốt vài chục năm của siêu
-                    phẩm và chỉ chịu thua hoạt hình kinh điển Spirited Away.
-                  </p>
-                  <p className="line__text">
-                    Tại Việt Nam, nơi chú mèo máy Doraemon luôn vững vàng ngồi
-                    top 1 doanh thu phòng vé, cuộc “so găng” tháng 12 – Kimetsu
-                    No Yaiba và Doraemon: Nobita's New Dinosaur có xảy đến bất
-                    ngờ?
-                  </p>
-                  <p className="line__text">
-                    <i>Kimetsu No Yaiba</i> / <i>Demon Slayer</i> /{" "}
-                    <i>Thanh Gươm Diệt Quỷ</i> gồm 23 tập, ra mắt vào 15.02.2016
-                    và vừa kết thúc hồi 18.05.2020. Đây là bộ truyện dài đầu tay
-                    của tác giả Gotouge Koyoharu – biệt danh Cá Sấu-sensei. So
-                    với những tuyệt phẩm lừng lẫy giới manga như{" "}
-                    <i>One Piece</i> <b>Kimetsu No Yaiba</b> kết thúc khá nhanh.
-                    Tuy vậy, điều này không hề ảnh hưởng tới sự nổi tiếng nó tạo
-                    ra. Mới vài năm ngắn ngủi, <b>Demon Slayer</b> đã trở thành
-                    “thế lực” lớn. Cá Sấu-sensei nay có thể học theo hai bậc
-                    tiền bối Takeuchi Naoko (tác giả Sailormoon / Thủy Thủ Mặt
-                    Trăng) và Takahashi Kazuki (tác giả Yu-Gi-Oh! / Vua Trò
-                    Chơi) chỉ cần một tác phẩm là đủ ăn cả đời.
-                  </p>
-                  <p className="line__text">
-                    Lấy bối cảnh thời cận đại, <i>Kimetsu No Yaiba</i> kể về
-                    Kamado Tanjiro 13 tuổi – một cậu bé hết sức bình thường. Cha
-                    mất sớm, Tanjiro nhận trách nhiệm chăm lo cho mẹ và 5 đứa
-                    em. Ngày nọ, lỡ đem than xuống núi bán rồi về trễ, Tanjiro
-                    bàng hoàng phát hiện cả nhà đều bị sát hại dã man. Cõng trên
-                    lưng cô em gái Nezuko vẫn còn hơi ấm, cậu chạy thục mạng
-                    giữa trời tuyết để tìm thầy thuốc. Trong khi đó, Nezuko từ
-                    từ biến đổi. Truyền thuyết quỷ dữ mà Tanjirou tưởng chỉ có
-                    nơi truyền thuyết bỗng hóa thành hiện thực bi thương.
-                  </p>
-                  <p className="line__text">
-                    Lúc Tanjiro đang bị Nezuko tấn công, một người lạ mặt xuất
-                    hiện. Anh ta giải cứu cậu và đòi chặt đầu Nezuko. Đó là
-                    Tomioka Giyuu – thành viên Đội Diệt quỷ. Tuy vậy, cảm động
-                    trước tình cảm Tanjiro dành cho em, cũng như chứng kiến
-                    Nezuko bảo vệ anh mình, Tomioka giới thiệu họ đến gặp ông
-                    lão Urokodaki Sankoji để học tập trở thành kiếm sĩ diệt quỷ.
-                    Tanjiro – với quyết tâm tìm ra kẻ sát hại gia đình và giúp
-                    em gái Nezuko trở lại thành người, dấn thân vào cuộc phiêu
-                    lưu đầy nguy hiểm.
+                    Như vậy là nối tiếp Ròm, phim chiếu rạp{" "}
+                    <b>Tiệc Trăng Máu</b> đã chính thức đổ bộ các phòng vé Việt.
                   </p>
                   <p className="line__img">
-                    <img src={cmt1} alt={cmt1}></img>
+                    <img
+                      src={cmt3}
+                      alt={cmt3}
+                      width="600px"
+                      height="350px"
+                    ></img>
                   </p>
                   <p className="line__text">
-                    Tổ chức Diệt quỷ không được chính phủ công nhận nhưng đã tồn
-                    tại từ xa xưa. Tomioka là Thủy trụ - thành viên Trụ Cột.
-                    Ngoài anh, nhóm còn có Âm trụ, Luyến trụ, Nham trụ, Hà trụ,
-                    Xà trụ, Trùng trụ, Phong trụ và Viêm trụ. Viêm trụ Rengoku
-                    Kyoujurou cũng thuộc dàn nhân vật quan trọng góp mặt ở{" "}
-                    <b>Demon Slayer: Kimetsu no Yaiba the Movie: Mugen Train</b>{" "}
-                    . Đối đầu với họ - phe quỷ dữ của “chúa trùm” Kibutsuji
-                    Muzan. Dưới trướng hắn là Thập nhị quỷ nguyệt – nửa Thượng
-                    Huyền, nửa Hạ Huyền.
+                    Như chúng ta đã biết, <b>Tiệc Trăng Máu</b> được chuyển thể
+                    từ phim hay Intimate Strangers (Người Quen Xa Lạ) của Hàn
+                    Quốc. Vốn dĩ đây cũng là một dự án remake từ bộ phim Perfect
+                    Strangers của Ý.
                   </p>
                   <p className="line__text">
-                    Sau hai năm huấn luyện gian khổ, Tanjiro “thi đậu” vào Đội
-                    Diệt quỷ, trải qua nhiều nhiệm vụ ngàn cân treo sợi tóc.{" "}
+                    Trước khi đi vào bình luận chính thức, xin phép được nhắc
+                    lại rằng tính đến 15.7.2019, Perfect Strangers xác lập kỷ
+                    lục Guinness thế giới – Trở thành phim được làm lại nhiều
+                    nhất trong lịch sử điện ảnh với 18 phiên bản trên toàn cầu.
+                    Riêng với bản Hàn, Intimate Strangers dù “sinh sau đẻ muộn”
+                    2 năm nhưng vẫn tiếp tục gây sốt phòng vé. Bằng chứng là
+                    phim đã được 44 quốc gia và vùng lãnh thổ mua lại bản quyền
+                    công chiếu cùng nhiều thành tích doanh thu ấn tượng khác ở
+                    thị trường nội địa: xếp thứ hai (Along with the Gods: The
+                    Last 49 Days) trong danh sách những phim có doanh thu trong
+                    tuần mở màn cao nhất năm 2018, xếp thứ ba trong nhóm những
+                    phim vượt qua 2 triệu lượt xem nhanh nhất năm 2018,…
                   </p>
                   <p className="line__text">
-                    Lần này, cậu và hai người bạn Inosuke đầu heo cùng Zenitsu
-                    nhát gan theo Viêm trụ lên chuyến tàu Vô Tận để điều tra
-                    việc 40 người mất tích. Sứ mệnh tưởng chừng đơn giản ấy lại
-                    ẩn chứa muôn vàn hiểm nguy. Liệu Tanjiro và các đồng đội có
-                    vượt qua nổi?
+                    Với những dữ liệu trên thì có thể chắc chắn một điều rằng
+                    nội dung – kịch bản của Tiệc Trăng Máu sẽ không thể nào
+                    khiến người xem có thể thất vọng. Tất nhiên, phiên bản Việt
+                    thì vẫn sẽ có những tình tiết được sửa đổi để phù hợp, gần
+                    gũi, chân thật hơn với con người và văn hóa Việt Nam. Đây
+                    cũng chính là một điểm mà ekip làm phim đã xử lý khá tốt và
+                    khéo léo.
                   </p>
                   <p className="line__text">
-                    Hoạt hình <i>Kimetsu No Yaiba</i> mùa 1 kết thúc ở tập 26,
-                    lúc Tanjiro tới nhà ga. Phim hoạt hình điện ảnh trực tiếp
-                    kết nối với đoạn kết này.
+                    Sau kịch bản, yếu tố thứ hai quyết định đến thành công của
+                    Perfect Strangers, Intimate Strangers và giờ đây cả{" "}
+                    <b>Tiệc Trăng Máu</b> chính là khả năng diễn xuất của dàn
+                    diễn viên.
                   </p>
                   <p className="line__text">
-                    Được xem là một trong những phân đoạn hay nhất bộ truyện
-                    tranh <i>Kimetsu No Yaiba</i> phim hay <b>Mugen Train</b>{" "}
-                    còn hấp dẫn bội phần khi Trụ Cột vốn đông người hâm mộ -
-                    Viêm trụ giữ vai trò chính. Ở cuộc khảo sát bên lề, đến hơn
-                    70% khán giả chọn Rengoku làm lý do họ ra rạp.
+                    Còn nhớ, ngay từ khi công bố dự án, Tiệc Trăng Máu đã thu
+                    hút sự chú ý rất lớn từ giới truyền thông và dư luận bởi sự
+                    tham gia của những cái tên có “trọng lượng” không hề nhỏ
+                    trong giới điện ảnh Việt. Hồng Ánh, Thái Hòa, Đức Thịnh, Thu
+                    Trang, Hức Vĩ Văn, Kiều Minh Tuấn hay thậm chí là người trẻ
+                    tuổi nhất Kaity Nguyễn – đều đã chứng minh được tài năng
+                    cũng như sở hữu những bộ phim có xếp hạng doanh thu cao của
+                    thị trường điện ảnh Việt.
+                  </p>
+                  <p className="line__img">
+                    <img
+                      src={cmt31}
+                      alt={cmt31}
+                      width="600px"
+                      height="350px"
+                    ></img>
                   </p>
                   <p className="line__text">
-                    Qua trailer, đồ họa và màu sắc vốn là điểm mạnh, hút fan của
-                    phiên bản anime vẫn hoàn hảo như thế trên bản điện ảnh. Âm
-                    nhạc khơi gợi cảm xúc cũng thành điểm cộng hoàn hảo.{" "}
+                    Vậy đến với Tiệc Trăng Máu, họ đã thể hiện ra sao đây?
                   </p>
                   <p className="line__text">
-                    26 tập <i>Demon Slayer</i> nhận nhiều lời khen nồng nhiệt
-                    nhờ việc bám cực kỳ sát cốt truyện. Làm sao tiếp tục giữ
-                    nhịp độ nhanh gọn từ manga và để những ai chưa từng đọc
-                    truyện mà tò mò đi xem theo kịp là thử thách lớn nhưng{" "}
-                    <b>Kimetsu No Yaiba The Movie</b> thực hiện rất tốt điểm
-                    này. Lượng người “càn quét” tại Nhật Bản chính là bằng chứng
-                    về độ xuất sắc của{" "}
-                    <b>Thanh Gươm Diệt Quỷ. Kimetsu No Yaiba</b> vượt qua{" "}
-                    <i>Khương Tử Nha</i> , đứng thứ 5 bảng xếp hạng doanh thu
-                    toàn cầu.
+                    Chúng ta đã quá quen thuộc với một Thu Trang hài hước, dí
+                    dỏm rồi phải không nào? Trong bộ phim hay này cô ấy vẫn sẽ
+                    như vậy… nhưng đó chưa phải là tất cả đâu nhé. Không chỉ thể
+                    hiện rất mượt “sự hài hước đậm chất vô duyên” của nhân vật,
+                    “Chị Mười Ba” còn thực sự bùng nổ ở cuối phim. Cũng chính vì
+                    thế mà không sai khi nói rằng, màn hóa thân của Thu Trang sẽ
+                    để lại ấn tượng nhiều nhất trong lòng khán giả.
                   </p>
                   <p className="line__text">
-                    Tại Việt Nam, nếu đặt suất chiếu sớm, các fan còn nhận thêm
-                    bộ quà khủng gồm 05 huy hiệu đầy đủ các nhân vật, 03 poster
-                    A2, 01 áo thun và 01 bìa hồ sơ.
+                    Nam diễn viên điển trai Hứa Vĩ Văn cũng có một màn tái xuất
+                    màn ảnh rộng ấn tượng không kém dù nhân vật mà anh đảm nhiệm
+                    không quá khác so với những hình tượng trước đây: vẫn điển
+                    trai phong độ, vẫn nhã nhặn điềm đạm, vẫn ôn nhu thấu hiểu…
+                    Thế nhưng có một câu nói rằng, đôi khi chỉ cần một khoảnh
+                    khắc thôi thì bạn cũng có thể tỏa sáng – và đó cũng chính là
+                    Hứa Vĩ Văn trong Tiệc Trăng Máu. Phân cảnh nam diễn viên đưa
+                    ra lời khuyên với con gái qua điện thoại chắc chắn sẽ khiến
+                    trái tim của nhiều khán giả xao xuyến rung động.
+                  </p>
+                  <p className="line__text">
+                    Sau Em Chưa 18, Kiều Minh Tuấn và Kaity Nguyễn tiếp tục yêu
+                    nhau trong Tiệc Trăng Máu. Phải thừa nhận một điều rằng phản
+                    ứng hóa học giữa cặp đôi này quá tốt. Sự ăn ý quá đỗi ngọt
+                    ngào của họ thực sự đã “tràn” ra cả ngoài màn hình rộng. Tất
+                    nhiên, so với bộ phim học đường trước đây, cả Kiều Minh Tuấn
+                    và Kaity Nguyễn đều cho thấy được sự trưởng thành, dày dạn
+                    kinh nghiệm phù hợp với yêu cầu của những nhân vật mới.
+                  </p>
+                  <p className="line__text">
+                    Còn với Hồng Ánh, Thái Hòa và Đức Thịnh, có lẽ không cần
+                    phải nói gì thêm nữa bởi với tài năng của họ, “nhiệm vụ” lần
+                    này không hề khó khăn một chút nào cả.
+                  </p>
+                  <p className="line__text">
+                    Bên cạnh những điểm mạnh, dĩ nhiên Tiệc Trăng Máu vẫn còn
+                    tồn tại một số khuyết điểm đáng tiếc. Có thể kể đến như phần
+                    đầu phim vẫn đang còn lê thê; đáng chú ý với những ai đã
+                    từng xem Intimate Strangers của Hàn Quốc, chắc hẳn sẽ có
+                    chút tiếc nuối khi phần âm nhạc trong phiên bản Việt vẫn
+                    chưa được sử dụng thực sự hiệu quả…
+                  </p>
+                  <p className="line__text">
+                    Trong thời điểm hàng loạt bom tấn quốc tế phải dời lịch
+                    chiếu liên tục vì diễn biến phức tạp của Covid, sự xuất hiện
+                    của những phim hay như Ròm và giờ là Tiệc Trăng Máu có thể
+                    nói rất quan trọng – không chỉ với các phòng chiếu mà còn
+                    với những người đam mê điện ảnh, muốn được trải nghiệm điện
+                    ảnh một cách chân chính.
+                  </p>
+                  <p className="line__text">
+                    Đừng quên, <b>Tiệc Trăng Máu</b> chính thức khởi chiếu trên
+                    toàn quốc từ ngày 23.10.2020.
                   </p>
                 </div>
               </div>
@@ -241,7 +250,10 @@ export default function CommentFilm1(props) {
                           </h3>
                         </NavLink>
 
-                        <NavLink to="/binh-luan-phim/review-gia-dinh-croods-ky-nguyen-moi--vui-nhon-nhung-sau-sac-va-nu-quyen-khong-he-suong" className="item__overlay--button">
+                        <NavLink
+                          to="/binh-luan-phim/review-gia-dinh-croods-ky-nguyen-moi--vui-nhon-nhung-sau-sac-va-nu-quyen-khong-he-suong"
+                          className="item__overlay--button"
+                        >
                           Chi Tiết
                         </NavLink>
                       </div>
@@ -257,7 +269,10 @@ export default function CommentFilm1(props) {
                           </h3>
                         </NavLink>
 
-                        <NavLink to="/binh-luan-phim/review-tiec-trang-mau-hoi-tu-anh-tai" className="item__overlay--button">
+                        <NavLink
+                          to="/binh-luan-phim/review-tiec-trang-mau-hoi-tu-anh-tai"
+                          className="item__overlay--button"
+                        >
                           Chi Tiết
                         </NavLink>
                       </div>
