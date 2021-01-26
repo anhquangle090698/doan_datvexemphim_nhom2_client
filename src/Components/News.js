@@ -136,7 +136,7 @@ export default function News(props) {
             <div className="news__content">
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/nhung-cai-ten-bao-chung-doanh-thu-phong-ve-tai-viet-nam">
                     <img
                       className="news__item--image"
                       src={news5}
@@ -145,7 +145,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/nhung-cai-ten-bao-chung-doanh-thu-phong-ve-tai-viet-nam">
                     <h3 className="news__item--title">
                       Những Cái Tên Bảo Chứng Doanh Thu Phòng Vé Tại Việt Nam
                     </h3>
@@ -157,7 +157,7 @@ export default function News(props) {
               </div>
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/pixar--ngoai-le-duy-nhat-cua-hollywood-p2">
                     <img
                       className="news__item--image"
                       src={news6}
@@ -166,7 +166,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/pixar--ngoai-le-duy-nhat-cua-hollywood-p2">
                     <h3 className="news__item--title">
                       Pixar – Ngoại Lệ Duy Nhất Của Hollywood (P.2)
                     </h3>
@@ -178,7 +178,7 @@ export default function News(props) {
               </div>
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/black-panther-2-khoi-quay-vao-mua-he-2021-marvel-lam-deadpool-3-voi-ryan-reynolds">
                     <img
                       className="news__item--image"
                       src={news7}
@@ -187,7 +187,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/black-panther-2-khoi-quay-vao-mua-he-2021-marvel-lam-deadpool-3-voi-ryan-reynolds">
                     <h3 className="news__item--title">
                       Black Panther 2 Khởi Quay Vào Mùa Hè 2021, Marvel Làm Deadpool 3 Với Ryan Reynolds
                     </h3>
@@ -200,7 +200,7 @@ export default function News(props) {
               </div>
               <div className="news__item">
                 <div className="news__item--blockImg">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/phim-kinh-dien-su-im-lang-cua-bay-cuu--tieng-thet-dam-mau-va-ga-bac-si-benh-hoan">
                     <img
                       className="news__item--image"
                       src={news8}
@@ -209,7 +209,7 @@ export default function News(props) {
                   </NavLink>
                 </div>
                 <div className="news__item--blockText">
-                  <NavLink to="/">
+                  <NavLink to="/blog-dien-anh/phim-kinh-dien-su-im-lang-cua-bay-cuu--tieng-thet-dam-mau-va-ga-bac-si-benh-hoan">
                     <h3 className="news__item--title">
                     Phim Kinh Điển: Sự Im Lặng Của Bầy Cừu – Tiếng Thét Đẫm Máu Và Gã Bác Sĩ Bệnh Hoạn
                     </h3>
