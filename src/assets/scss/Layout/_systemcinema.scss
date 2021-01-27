@@ -39,7 +39,7 @@
     }
 
     .systemCinema__body {
-        width: 60%;
+        width: 70%;
         margin: $mg-30 auto 0;
 
         .systemCinema__listSCinema {
@@ -54,6 +54,23 @@
             &::before {
                 content: "";
                 position: absolute;
+                bottom: -6px;
+                left: -6px;
+                z-index: 2;
+
+                display: block;
+                width: 20px;
+                height: 20px;
+
+                
+                border-width: 0 0 2px 2px;
+                border-color: $color-black-1;
+                border-style: solid;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
                 top: -6px;
                 left: -6px;
                 z-index: 2;
@@ -63,22 +80,6 @@
                 height: 20px;
 
                 border-width: 2px 0 0 2px;
-                border-color: $color-black-1;
-                border-style: solid;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -6px;
-                left: -6px;
-                z-index: 2;
-
-                display: block;
-                width: 20px;
-                height: 20px;
-
-                border-width: 0 0 2px 2px;
                 border-color: $color-black-1;
                 border-style: solid;
             }
@@ -183,6 +184,9 @@
 
             .systemCinema__showTime {
 
+                position: relative;
+
+                width: 100%;
                 margin: $mg-20 0;
 
                 border-bottom: 1px solid $color-gray-1;
@@ -310,5 +314,65 @@
                 }
             }
         }
+    }
+}
+
+//Responsive
+
+.systemCinema {
+    @include responsive("extra") {
+
+        .systemCinema__body {
+            width: 75%;
+
+        }
+
+    }
+
+    @include responsive("extra-large") {
+
+        .systemCinema__body {
+            width: 85%;
+        }
+
+    }
+
+    @include responsive("large") {
+
+        .systemCinema__body {
+            width: 95%;
+        }
+
+    }
+
+    @include responsive("medium") {
+
+        .systemCinema__body {
+            width: 95%;
+            
+            .systemCinema__listSCinema {
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            .systemCinema__listShowTimes {
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    @include responsive("small") {
+
+        .systemCinema__body {
+           display: none;
+           visibility: hidden;
+        }
+
     }
 }

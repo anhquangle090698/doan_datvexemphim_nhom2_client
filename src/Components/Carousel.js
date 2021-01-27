@@ -42,7 +42,7 @@ export default function Carousel(props) {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{delay : 2000, disableOnInteraction : false}}
+          // autoplay={{delay : 2000, disableOnInteraction : false}}
           loop={true}
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}

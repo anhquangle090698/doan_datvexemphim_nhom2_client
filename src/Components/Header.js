@@ -54,7 +54,7 @@ export default function Header(props) {
                 <li className="nav__item">
                   <a
                     className="nav__link"
-                    href="#lich-chieu"
+                    href="/#lich-chieu"
                     onClick={() => {
                       setShow(false);
                     }}
@@ -65,7 +65,7 @@ export default function Header(props) {
                 <li className="nav__item">
                   <a
                     className="nav__link"
-                    href="#cum-rap"
+                    href="/#cum-rap"
                     onClick={() => {
                       setShow(false);
                     }}
@@ -76,7 +76,7 @@ export default function Header(props) {
                 <li className="nav__item">
                   <a
                     className="nav__link"
-                    href="#tin-tuc"
+                    href="/#tin-tuc"
                     onClick={() => {
                       setShow(false);
                     }}
@@ -87,7 +87,7 @@ export default function Header(props) {
                 <li className="nav__item">
                   <a
                     className="nav__link"
-                    href="#khuyen-mai"
+                    href="/#khuyen-mai"
                     onClick={() => {
                       setShow(false);
                     }}

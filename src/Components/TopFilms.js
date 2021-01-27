@@ -35,7 +35,7 @@ export default function TopFilms(props) {
         <Swiper
           slidesPerView={5}
           effect="coverflow"
-          navigation
+          // navigation
           grabCursor={true}
           centeredSlides={true}
           coverflowEffect={{

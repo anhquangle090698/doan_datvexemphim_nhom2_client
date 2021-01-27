@@ -6,6 +6,8 @@
     background: rgb(252, 164, 69);
     background: linear-gradient(90deg, rgba(252, 164, 69, 1) 0%, rgba(253, 130, 29, 1) 50%, rgba(252, 164, 69, 1) 100%);
 
+    transition: all .3s;
+    
     .topFilm {
         width: 65%;
         margin: $mg-30 auto;
@@ -158,4 +160,57 @@
             }
         }
     }
+}
+
+
+//Responsive
+
+.topFilm__wrapper {
+    @include responsive("extra") {
+
+       .topFilm {
+            width: 80%;
+
+            .topFilm__item {
+                width: 300px;
+                height: 100%;
+                max-height: 400px;
+            }
+       }
+
+    }
+
+    @include responsive("extra-large") {
+
+        .topFilm {
+             width: 85%;
+ 
+             .topFilm__item {
+                 width: 300px;
+                 height: 100%;
+                 max-height: 400px;
+             }
+        }
+ 
+     }
+
+     @include responsive("large") {
+
+        .topFilm {
+             width: 95%;
+ 
+             .topFilm__item {
+                 width: 300px;
+                 height: 100%;
+                 max-height: 380px;
+             }
+        }
+ 
+     }
+
+     @include responsive("medium") {
+
+         display: none;
+
+     }
 }

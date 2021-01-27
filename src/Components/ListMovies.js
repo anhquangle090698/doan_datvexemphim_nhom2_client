@@ -30,7 +30,7 @@ export default function ListMovies(props) {
 
   const renderListFilm = (startFilm, endFilm) => {
     return listFilm.slice(startFilm, endFilm).map((film, index) => {
-      return <div className="col-sm-6 col-md-3" key={index}>
+      return <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
           <Movie phim = {film} ></Movie>
       </div>
     });

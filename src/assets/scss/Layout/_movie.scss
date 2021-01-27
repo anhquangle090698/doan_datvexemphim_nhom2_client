@@ -31,6 +31,7 @@
             left: 0;
 
             width: 100%;
+            max-width: 250px;
             height: 100%;
 
             background: linear-gradient(to top, $color-black-0, transparent 100%);
@@ -76,7 +77,7 @@
         .movie__rating {
             position: absolute;
             top: 10px;
-            right: 10px;
+            right: 25px;
 
             padding: $pd-5 - 2;
 
@@ -136,6 +137,7 @@
                     @include styleText($color-white-0, $fs-16, $fw-400);
 
                     width: 100%;
+                    max-width: 250px;
 
                     border: none;
                     outline: none;
@@ -187,5 +189,82 @@
     &:hover .movie__info--title {
         visibility: hidden;
         opacity: 0;
+    }
+}
+
+
+//responsive 
+
+.movie__content {
+
+    @include responsive("extra-large") {
+
+        .movie__image {
+
+            
+
+            .movie__rating {
+                position: absolute;
+                top: 10px;
+                right: 15px;         
+            }
+        }    
+    
+}
+    @include responsive("large") {
+
+            .movie__image {
+
+                img {
+                    max-width: 220px;
+                }
+                
+                .movie__overlayImg {
+                    width: 100%;
+                    max-width: 220px;
+                }
+
+                .movie__rating {
+                    position: absolute;
+                    top: 10px;
+                    right: 50px;         
+                }
+            }    
+            
+            .movie__info {
+                .movie__overlayTitle {
+
+                    .movie__overlayTitle--block {
+                        .movie__button--orange {
+
+                            max-width: 220px;
+                        }
+                    }
+                    
+                }
+            }
+    }
+
+@include responsive("medium") {
+
+        .movie__image {
+            
+            .movie__rating {
+               display: none;     
+            }
+
+            
+        }    
+        
+        .movie__info {
+            .movie__info--title {
+                font-size: $fs-12 + 2;
+            }
+        }
+
+    }
+
+    @include responsive("small") {
+        margin: 0 80px 50px;
     }
 }
