@@ -40,12 +40,13 @@
 
         margin-bottom: $mg-30;
 
-        .col-md-3 {
+        .col-md-4,
+        .col-lg-3 {
             margin: $mg-10 0 !important;
         }
 
         .promotion__item {
-            
+
             position: relative;
 
             max-width: 280px;
@@ -54,7 +55,7 @@
             img {
                 width: 100%;
                 height: 100%;
-                max-width: 280px;
+
 
                 border-radius: 5px;
 
@@ -62,7 +63,7 @@
             }
 
             .promotion__overlay {
-                
+
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -80,7 +81,7 @@
                 overflow: hidden;
 
                 transition: all .3s;
-                
+
                 .promotion__overlay--title {
                     @include styleText($color-white-0, $fs-16 + 2, $fw-400);
 
@@ -88,14 +89,14 @@
 
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
-    
+
                     overflow: hidden;
                     text-overflow: ellipsis;
                     -webkit-line-clamp: 2;
 
                     cursor: pointer;
 
-                    transform:  translateX(-101%);
+                    transform: translateX(-101%);
                     transition: all .4s ease-out;
                 }
 
@@ -108,14 +109,14 @@
 
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
-    
+
                     overflow: hidden;
                     text-overflow: ellipsis;
                     -webkit-line-clamp: 6;
 
                     cursor: pointer;
 
-                    transform:  translateX(120%);
+                    transform: translateX(120%);
                     transition: all .4s ease-out;
                 }
 
@@ -131,7 +132,7 @@
                     position: absolute;
                     bottom: 50px;
                     left: 30%;
-                    
+
                     opacity: 0;
 
                     transition: all .4s ease-out;
@@ -143,11 +144,13 @@
                 }
             }
 
-            &:hover .promotion__overlay, &:hover .promotion__overlay--button{
+            &:hover .promotion__overlay,
+            &:hover .promotion__overlay--button {
                 opacity: 1;
             }
 
-            &:hover .promotion__overlay--title, &:hover  .promotion__overlay--text{
+            &:hover .promotion__overlay--title,
+            &:hover .promotion__overlay--text {
                 transform: translateX(0);
             }
         }
@@ -158,10 +161,68 @@
 
         .promotion__about--text {
             @include styleText($color-black-2, $fs-16 - 2, $fw-400);
-            
+
             line-height: $line-height;
 
             margin: $mg-15 0;
+        }
+    }
+}
+
+//Responsive
+
+.promotion {
+    @include responsive("extra") {
+        width: 84%;
+
+        .promotion__content {
+            .promotion__item {
+
+                max-width: 240px;
+
+            }
+        }
+    }
+
+    @include responsive("extra-large") {
+        width: 84%;
+
+        .promotion__content {
+            .promotion__item {
+
+                max-width: 200px;
+
+            }
+        }
+    }
+
+    @include responsive("large") {
+        width: 95%;
+
+        .promotion__content {
+            .promotion__item {
+
+                max-width: 240px;
+
+            }
+        }
+    }
+
+    @include responsive("medium") {
+        width: 95%;
+
+        .promotion__top {
+            .promotion__top--title {
+                font-size: $fs-16;
+            }
+        }
+
+        .promotion__content {
+            .promotion__item {
+
+                max-width: 280px;
+
+            }
         }
     }
 }

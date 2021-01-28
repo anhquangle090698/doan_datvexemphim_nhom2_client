@@ -101,3 +101,68 @@
         }
     } 
 }
+
+
+//Responsive
+
+.news {
+    @include responsive("extra") {
+            width: 84%;
+    }
+
+    @include responsive("large") {
+           width: 95%;
+           
+           .news__item {
+
+                width: 90%;
+                margin: $mg-30 auto;
+
+               .news__item--blockImg {
+
+                    flex-basis: 25%;
+               }
+
+               .news__item--blockText {
+
+                    .news__item--title {
+                        font-size: $fs-12 + 2;
+                    }
+
+                    .news__item--subtitle {
+                        font-size: $fs-12;
+                    }
+               }
+           }
+    }
+
+    @include responsive("medium") {
+
+        .news__top {
+            .news__top--title {
+                font-size: $fs-16;
+            }
+        }
+        .news__item {
+
+            width: 95%;
+            margin: $mg-30 auto;
+
+           .news__item--blockImg {
+
+                flex-basis: 20%;
+           }
+
+           .news__item--blockText {
+
+                .news__item--title {
+                    font-size: $fs-12 + 3;
+                }
+
+                .news__item--subtitle {
+                    display: none;
+                }
+           }
+       }
+    }
+}

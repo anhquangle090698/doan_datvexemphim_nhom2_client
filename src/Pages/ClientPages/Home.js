@@ -19,7 +19,6 @@ import {
 import { postInformationAccountApiAction } from "../../redux/actions/ManageUserReducerAction";
 
 export default function Home(props) {
-
   const { informationUserSignIn } = useSelector(
     (state) => state.StateManageUser
   );

@@ -4,7 +4,7 @@ import DetailFilm from "../../Components/DetailFilm";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import Popup from "../../Components/Popup";
-import LoadingPage from '../../Components/LoadingPage'
+import LoadingPage from "../../Components/LoadingPage";
 import ScrollToTop from "../../Components/ScrollToTop";
 import { getDetailMovieByIdFilmApiAction } from "../../redux/actions/ManageFilmReducerActions";
 
@@ -23,7 +23,7 @@ export default function DetailMovie(props) {
     };
 
     fetchDataDetailFilm();
-  },[]);
+  }, []);
 
   useEffect(() => {
     const timeOut = setTimeout(() => {

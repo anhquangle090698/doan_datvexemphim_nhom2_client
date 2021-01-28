@@ -18,7 +18,7 @@ export default function Promotion(props) {
         </div>
         <div className="promotion__content">
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion4} alt={promotion4}></img>
                 <div className="promotion__overlay">
@@ -40,7 +40,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion2} alt={promotion2}></img>
                 <div className="promotion__overlay">
@@ -63,7 +63,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion3} alt={promotion3}></img>
                 <div className="promotion__overlay">
@@ -86,7 +86,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion1} alt={promotion1}></img>
                 <div className="promotion__overlay">
@@ -112,7 +112,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion5} alt={promotion5}></img>
                 <div className="promotion__overlay">
@@ -137,7 +137,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion6} alt={promotion6}></img>
                 <div className="promotion__overlay">
@@ -161,7 +161,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion7} alt={promotion7}></img>
                 <div className="promotion__overlay">
@@ -177,7 +177,7 @@ export default function Promotion(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-sm-6 col-md-4 col-lg-3">
               <div className="promotion__item">
                 <img src={promotion8} alt={promotion8}></img>
                 <div className="promotion__overlay">

@@ -52,17 +52,22 @@
                 width: 100%;
                 height: 100%;
 
+                max-height: 350px;
+                width: 230px;
+
                 .detailFilm__imageFilm {
 
                     width: 100%;
                     height: 100%;
-                    max-width: 230px;
+                    
 
                     border-radius: 3px;
 
                     box-shadow: 0 0 20px 0 rgba($color: #ffd615, $alpha: .3),
                         0 10px 20px 0 rgba($color: #ffd615, $alpha: .3),
                         10px 0 25px 0 rgba($color: #ffd615, $alpha: .3);
+
+                    object-fit: cover;
 
                 }
 
@@ -332,5 +337,144 @@
                 }
             }
         }
+    }
+}
+
+//Responsive
+
+.detailFilm__main {
+
+    @include responsive("extra") {
+
+        .detailFilm__information {
+
+            .detailFilm__content {
+    
+                width: 85%;
+    
+            }
+        }
+
+        .detailFilm__showTime {
+
+            .detailFilm__showTimeContent {
+                width: 85%;
+            }
+        }
+
+    }
+    
+    @include responsive("extra-large") {
+
+        .detailFilm__information {
+
+            .detailFilm__content {
+    
+                width: 90%;
+    
+            }
+        }
+
+        .detailFilm__showTime {
+
+            .detailFilm__showTimeContent {
+                width: 90%;
+            }
+        }
+
+    }
+
+    @include responsive("large") {
+
+        .detailFilm__information {
+
+            .detailFilm__content {
+    
+                width: 90%;
+
+                top: 70%;
+            
+                .detailFilm__contentLeft {
+                    margin: 0 auto;
+                }
+
+                .detailFilm__contentRight {
+
+                    margin-top: $mg-20;
+
+                    .detailFilm__titleFilm {
+                        font-size: $fs-35;
+
+                        margin: 0;
+                        margin-bottom: $mg-10;
+                    }
+
+                    .detailFilm__rating, .detailFilm__description {
+                        display: none;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+
+        .detailFilm__showTime {
+
+            margin-top: 150px;
+
+            .detailFilm__titleShowTime {
+                font-size: $fs-20;
+            }
+              
+        }
+
+    }
+
+    @include responsive("medium") {
+
+        .detailFilm__information {
+
+            .detailFilm__content {
+
+                top: 90%;
+
+                .detailFilm__contentLeft {
+                    
+                    max-height: 300px;
+                    width: 200px;
+
+                }
+                
+                .detailFilm__contentRight {
+
+                    margin-top: $mg-20;
+
+                    .detailFilm__titleFilm {
+                        font-size: $fs-30;
+
+                        margin: 0;
+                        margin-bottom: $mg-10;
+                    }
+
+                    .detailFilm__rating, .detailFilm__description {
+                        display: none;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+
+        .detailFilm__showTime {
+
+            margin-top: 250px;
+
+            .detailFilm__titleShowTime {
+                font-size: $fs-16;
+            }
+
+            .detailFilm__showTimeContent {
+                width: 80%;
+            }         
+        }
+
     }
 }

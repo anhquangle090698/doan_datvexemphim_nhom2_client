@@ -15,7 +15,7 @@ export default function News(props) {
     <>
       <div className="news" id="tin-tuc">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-12 col-lg-6">
             <div className="news__top">
               <h1 className="news__top--title">Bình Luận Phim</h1>
             </div>
@@ -129,7 +129,7 @@ export default function News(props) {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-12 col-lg-6">
             <div className="news__top">
               <h1 className="news__top--title">Góc Điện Ảnh</h1>
             </div>

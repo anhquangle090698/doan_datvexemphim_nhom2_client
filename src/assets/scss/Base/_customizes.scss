@@ -207,3 +207,19 @@
 ::-webkit-scrollbar {
     width: 4px;
 }
+
+
+    @include responsive("large") {
+
+        .nav-pills {
+            .nav-link {
+
+                justify-content: center;    
+                span {
+                    display: none;
+                }
+            }
+        }
+    
+    }
+

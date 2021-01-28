@@ -22,7 +22,7 @@
             object-fit: cover;
 
             box-shadow: 10px 10px 10px 0 rgba($color: $color-gray-3, $alpha: .3),
-                        0px 0 10px 0 rgba($color: $color-gray-3, $alpha: .3);
+                0px 0 10px 0 rgba($color: $color-gray-3, $alpha: .3);
         }
 
         .movie__overlayImg {
@@ -201,61 +201,62 @@
 
         .movie__image {
 
-            
+
 
             .movie__rating {
                 position: absolute;
                 top: 10px;
-                right: 15px;         
+                right: 15px;
             }
-        }    
-    
-}
-    @include responsive("large") {
+        }
 
-            .movie__image {
-
-                img {
-                    max-width: 220px;
-                }
-                
-                .movie__overlayImg {
-                    width: 100%;
-                    max-width: 220px;
-                }
-
-                .movie__rating {
-                    position: absolute;
-                    top: 10px;
-                    right: 50px;         
-                }
-            }    
-            
-            .movie__info {
-                .movie__overlayTitle {
-
-                    .movie__overlayTitle--block {
-                        .movie__button--orange {
-
-                            max-width: 220px;
-                        }
-                    }
-                    
-                }
-            }
     }
 
-@include responsive("medium") {
+    @include responsive("large") {
 
         .movie__image {
-            
-            .movie__rating {
-               display: none;     
+
+            img {
+                max-width: 220px;
             }
 
-            
-        }    
-        
+            .movie__overlayImg {
+                width: 100%;
+                max-width: 220px;
+            }
+
+            .movie__rating {
+                position: absolute;
+                top: 10px;
+                right: 50px;
+            }
+        }
+
+        .movie__info {
+            .movie__overlayTitle {
+
+                .movie__overlayTitle--block {
+                    .movie__button--orange {
+
+                        max-width: 220px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    @include responsive("medium") {
+
+        .movie__image {
+
+            .movie__rating {
+                display: none;
+            }
+
+
+        }
+
         .movie__info {
             .movie__info--title {
                 font-size: $fs-12 + 2;

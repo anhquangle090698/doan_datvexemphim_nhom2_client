@@ -52,7 +52,7 @@ export default function SystemCinema(props) {
           }}
         >
           <img src={scinema.logo} alt={scinema.logo}></img>
-          <span>{scinema.tenHeThongRap}</span>
+          <span className="systemCinema__listSCinema--name">{scinema.tenHeThongRap}</span>
         </a>
       );
     });

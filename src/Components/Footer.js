@@ -19,7 +19,7 @@ export default function Footer(props) {
       <footer className="footer">
         <div className="footer__container">
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="footer__item">
                 <div className="footer__top">
                   <h3 className="footer__top--title">Giới Thiệu</h3>
@@ -40,7 +40,7 @@ export default function Footer(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="footer__item">
                 <div className="footer__top">
                   <h3 className="footer__top--title">Hỗ Trợ</h3>
@@ -61,7 +61,7 @@ export default function Footer(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="footer__item">
                 <div className="footer__top">
                   <h3 className="footer__top--title">Liên Hệ</h3>
@@ -80,7 +80,7 @@ export default function Footer(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="footer__item">
                 <div className="footer__top">
                   <h3 className="footer__top--title">Kết nối g2 cinema</h3>

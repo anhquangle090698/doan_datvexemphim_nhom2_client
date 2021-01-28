@@ -62,7 +62,7 @@
                 width: 20px;
                 height: 20px;
 
-                
+
                 border-width: 0 0 2px 2px;
                 border-color: $color-black-1;
                 border-style: solid;
@@ -322,14 +322,23 @@
 .systemCinema {
     @include responsive("extra") {
 
+        .systemCinema__top {
+            width: 85%;
+            margin: 0 auto;
+        }
+
         .systemCinema__body {
             width: 75%;
-
         }
 
     }
 
     @include responsive("extra-large") {
+
+        .systemCinema__top {
+            width: 95%;
+            margin: 0 auto;
+        }
 
         .systemCinema__body {
             width: 85%;
@@ -347,9 +356,18 @@
 
     @include responsive("medium") {
 
+        .systemCinema__top {
+            width: 95%;
+            margin: 0 auto;
+
+            .systemCinema__top--title {
+                font-size: $fs-16;
+            }
+        }
+
         .systemCinema__body {
             width: 95%;
-            
+
             .systemCinema__listSCinema {
 
                 &::before {
@@ -369,9 +387,9 @@
 
     @include responsive("small") {
 
-        .systemCinema__body {
-           display: none;
-           visibility: hidden;
+        .systemCinema__body, .systemCinema__top {
+            display: none;
+            visibility: hidden;
         }
 
     }
