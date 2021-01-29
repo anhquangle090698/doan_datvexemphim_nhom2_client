@@ -229,12 +229,21 @@ export default function TicketRoom(props) {
       ) : (
         <div className="ticketRoom">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-12 col-lg-9">
               <div className="ticket__chooseChair">
                 <div className="ticket__content">
                   <div className="ticket__cinema">
                     <h3>{detailTicketRoom.thongTinPhim?.tenCumRap}</h3>
                     <p>{detailTicketRoom.thongTinPhim?.diaChi}</p>
+                  </div>
+                  <div className="ticket__price">
+                      <h3>
+                          {listChairBooking
+                        .reduce((tongTien, chair, index) => {
+                          return tongTien + chair.giaVe;
+                        }, 0)
+                        .toLocaleString(2) + " đ"}
+                      </h3>
                   </div>
                   <div className="ticket__timer">
                     <p>Thời gian giữ ghế</p>
@@ -313,7 +322,7 @@ export default function TicketRoom(props) {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-12 col-lg-3">
               <div className="ticket__checkout">
                 <p className="ticket__totalPrice">
                   {/* {formatVND(listChairBooking.reduce((tongTien, chair, index) => {
@@ -421,6 +430,47 @@ export default function TicketRoom(props) {
           ) : (
             ""
           )}
+
+          <div className="ticket__checkOutSmall">
+              <div className="ticket__checkOutSmall--listChair">
+                {listChairBooking.map((chair, index) => {
+                      return (
+                        <Fragment key={index}>
+                          <span className="ticket__checkOutSmall--chair">
+                            {logicNumberChairTicket(chair.stt)},{" "}
+                          </span>
+                        </Fragment>
+                      );
+                    })}
+              </div>
+              <div className="ticket__checkOutSmall--confirm"
+                onClick={async () => {
+                  if (
+                    typeof listChairBooking !== "undefined" &&
+                    listChairBooking.length > 0
+                  ) {
+                    let objectBooking = {
+                      maLichChieu: props.match.params.maLichChieu,
+                      danhSachVe: listChairBooking,
+                      taiKhoanNguoiDung: informationUserSignIn.taiKhoan,
+                    };
+
+                    dispatch(
+                      await postManageBookingApiAction(objectBooking)
+                    );
+                  } else {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Bạn Chưa Chọn Ghế!",
+                      showConfirmButton: false,
+                      timer: 1500,
+                    });
+                  }
+                }}
+              >
+                Đặt Vé
+              </div>
+          </div>
         </div>
       )}
     </>
