@@ -11,14 +11,14 @@
     height: 80px;
 
     .label--edit {
-        @include styleText($color-black-1, $fs-16 - 2, $fw-400);
+        @include styleText($color-black-1, $fs-14, $fw-400);
 
         margin-left: $mg-5;
 
         .label--icon {
             margin-right: $mg-5;
         }
-    }   
+    }
 
     .form__control--edit {
 
@@ -34,7 +34,7 @@
         border: 1px solid $color-gray-2;
         border-radius: 5px;
 
-        font-size: $fs-12 + 2;
+        font-size: $fs-14;
 
         transition: all .3s ease;
 
@@ -43,7 +43,7 @@
         }
 
         &.invalid {
-            border: 1.5px solid #d72323;
+            border: 1.5px solid $color-red-0;
         }
 
         &:disabled {
@@ -54,18 +54,19 @@
     }
 
     .form__error--edit {
-        @include styleText(#d72323, $fs-10 + 2, $fw-400);
+        @include styleText($color-red-0, $fs-12, $fw-400);
 
         position: relative;
+        top: -20px;
     }
 
     .fa-info {
 
-        position: absolute;
-        top: 43px;
-        right: 31%;
+        position: relative;
+        top: -30px;
+        left: 325px;
 
-        color: #d72323;
+        color: $color-red-0;
         font-size: $fs-10;
 
         width: 20px;
@@ -74,17 +75,20 @@
 
         text-align: center;
 
-        border: 1px solid #d72323;
+        border: 1px solid $color-red-0;
         border-radius: 50%;
     }
 
     .fa-eye {
-        position: absolute;
-        top: 43px;
-        right: 36%;
+        position: relative;
+        top: -30px;
+        left: 325px;
 
         color: $color-black-1;
         font-size: $fs-16 + 2;
+
+        width: 20px;
+        height: 20px;
 
         text-align: center;
 
@@ -92,34 +96,45 @@
 
         z-index: 7;
 
-        &::after {
-            content: 'hiện mật khẩu';
-            position: absolute;
-            top: -40px;
-            right: -20px;
-            z-index: 1;
-
-            height: 60px;
-            width: 100px;
-
-            background-color: $color-blue-0;
-            color : $color-white-0;
-
-            visibility: hidden;
-            opacity: 0;
-
-            transition: all .3s ease-in-out;
-
-            clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 75% 60%, 65% 85%, 50% 60%, 0% 60%);
-        }
-
-        &:hover::after {
-            visibility: visible;
-            opacity: 1;
-        }
-        
         &:hover {
-            color : $color-blue-0;
+            color: $color-blue-0;
+        }
+    }
+}
+
+//Responsive 
+
+.form__group--edit {
+
+    @include responsive("extra-large") {
+        width: 45%;
+
+        margin-right: $mg-5;
+    }
+
+    @include responsive("large") {
+        width: 100%;
+
+        .form__control--edit {
+            
+            max-width: 550px;
+        }
+
+        .fa-info, .fa-eye {
+            
+            left: 555px;
+        }
+    }
+
+    @include responsive("medium") {
+
+        .form__control--edit {
+            max-width: 450px;
+        }
+
+        .fa-info, .fa-eye {
+            
+            left: 455px;
         }
     }
 }

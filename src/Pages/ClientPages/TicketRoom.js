@@ -230,6 +230,7 @@ export default function TicketRoom(props) {
         <div className="ticketRoom">
           <div className="row">
             <div className="col-12 col-lg-9">
+              <NavLink to="/" className="ticketRoom__back"><i className="fa fa-angle-left"></i> Trở về trang chủ</NavLink>
               <div className="ticket__chooseChair">
                 <div className="ticket__content">
                   <div className="ticket__cinema">

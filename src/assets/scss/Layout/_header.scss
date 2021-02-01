@@ -61,8 +61,12 @@ header {
 
         .nav__user {
 
+            .nav__user--name {
+                @include styleText($color-black-1, $fs-14, $fw-400);
+            }
+
             .nav__user--button {
-                @include styleButton(transparent, 8px, $pd-10, $pd-15);
+                @include styleButton(transparent, $border-radius + 3, $pd-10, $pd-15);
 
                 border: none;
                 outline: none;
@@ -192,7 +196,7 @@ header {
                         margin: 50px 0;
 
                         .nav__link {
-                            @include styleText($color-white-0, $fs-12 + 2, $fw-400);
+                            @include styleText($color-white-0, $fs-14, $fw-400);
 
                             letter-spacing: 1px;
 
@@ -212,18 +216,18 @@ header {
                     margin-bottom: $mg-15;
 
                     .nav__user--name {
-                        @include styleText($color-white-0, $fs-12 + 2, $fw-700);
+                        @include styleText($color-white-0, $fs-14, $fw-700);
                     }
 
                     .nav__user--button {
-                        @include styleButton(transparent, 8px, $pd-10, $pd-15);
+                        @include styleButton(transparent, $border-radius + 3, $pd-10, $pd-15);
 
                         border: 1px solid $color-black-1;
 
                         transition: all .3s;
 
                         .nav__user--login {
-                            @include styleText($color-white-0, $fs-12 + 2, $fw-700);
+                            @include styleText($color-white-0, $fs-14, $fw-700);
                         }
 
                         .fa-user {
@@ -249,7 +253,7 @@ header {
 
 
                     .nav__user--information {
-                        @include styleText($color-white-0, $fs-12 + 2, $fw-400);
+                        @include styleText($color-white-0, $fs-14, $fw-400);
                     }
                 }
             }
@@ -329,7 +333,7 @@ header {
 
                         padding: $pd-20;
 
-                        @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                        @include styleText($color-black-1, $fs-14, $fw-400);
 
                         transition: all .3s ease-in-out;
 
@@ -382,7 +386,7 @@ header {
                 display: flex;
                 align-items: center;
 
-                @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                @include styleText($color-black-1, $fs-14, $fw-400);
 
                 .nav__user--dropdown {
                     position: relative;
@@ -405,7 +409,7 @@ header {
                         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
                         .nav__logout {
-                            @include styleText($color-white-0, $fs-12 + 2, $fw-400);
+                            @include styleText($color-white-0, $fs-14, $fw-400);
 
 
                         }
@@ -446,7 +450,7 @@ header {
         .header__nav {
             .nav__menu {
                 .nav__list {
-                    margin-left: 50px;
+                    margin-left: $mg-50;
                 }
             }
 
@@ -463,7 +467,7 @@ header {
         .header__nav {
             .nav__menu {
                 .nav__list {
-                    margin-left: -70px;
+                    margin-left: -$mg-70;
                 }
             }
         }

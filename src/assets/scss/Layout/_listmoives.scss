@@ -2,11 +2,15 @@
     position: relative;
     width: 100%;
 
-    padding: 80px 0 $pd-30;
+    padding: $pd-70 + 10 0 $pd-30;
 
     .listMovies__top {
         width: 65%;
         margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         .listMovies__top--title {
             position: relative;
@@ -35,6 +39,50 @@
                 background-color: $color-orange-1;
             }
         }
+
+        .listMovies__search {
+            background: $color-orange-1;
+            height: 40px;
+            border-radius: 40px;
+            padding: $pd-10;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            .listMovies__search--input {
+                border: none;
+                background: none;
+                outline: none;
+                padding: 0;
+
+                &::placeholder {
+                    color: $color-black-0;
+                }
+
+                @include styleText($color-black-0, $fs-14, $fw-400);                
+            }
+
+            .listMovies__search--submit {
+                border: none;
+                outline: none;
+
+                background: $color-white-0;
+
+                width: 30px;
+                height: 30px;
+
+                border-radius: 50%;
+            }
+
+            .listMovies__search--error {
+                position: absolute;
+                top: 40px;
+
+                @include styleText($color-red-0, $fs-14, $fw-400);
+            }
+        }
     }
 
     .listMovies__body {
@@ -43,7 +91,7 @@
         height: 100%;
 
         .row {
-            padding: $pd-20 70px;
+            padding: $pd-20 $pd-70;
 
             .listMovies__showMore {
                 position: absolute;
@@ -53,7 +101,7 @@
                 padding: $pd-10 $pd-15;
 
                 border: 1px solid $color-orange-1;
-                border-radius: 5px;
+                border-radius: $border-radius;
 
                 color: $color-orange-1;
 
@@ -72,6 +120,13 @@
                     -webkit-animation-iteration-count: 1;
                     animation-iteration-count: 1;
                 }
+            }
+
+            .no--result {
+
+                @include styleText($color-orange-2, $fs-30, $fw-400);
+
+                margin-bottom: 300px;
             }
         }
     }
@@ -117,7 +172,7 @@
         position: relative;
         width: 100%;
 
-        padding: 80px 0 $pd-30;
+        padding: $pd-70 + 10 0 $pd-30;
 
         .listMovies__top {
             width: 85%;
@@ -134,11 +189,6 @@
 
     @include responsive("extra-large") {
 
-        position: relative;
-        width: 100%;
-
-        padding: 80px 0 $pd-30;
-
         .listMovies__top {
             width: 95%;
             margin: 0 auto;
@@ -153,11 +203,6 @@
     }
 
     @include responsive("large") {
-
-        position: relative;
-        width: 100%;
-
-        padding: 80px 0 $pd-30;
 
         .listMovies__top {
             width: 95%;
@@ -177,11 +222,6 @@
     }
 
     @include responsive("medium") {
-
-        position: relative;
-        width: 100%;
-
-        padding: 80px 0 $pd-30;
 
         .listMovies__top {
             width: 95%;

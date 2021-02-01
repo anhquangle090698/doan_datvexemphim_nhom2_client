@@ -29,13 +29,16 @@ export default function Footer(props) {
                     <i className="fa fa-angle-double-right"></i> Về Chúng tôi
                   </p>
                   <p className="footer__content--text">
-                    <i className="fa fa-angle-double-right"></i> Thỏa Thuận Sử Dụng
+                    <i className="fa fa-angle-double-right"></i> Thỏa Thuận Sử
+                    Dụng
                   </p>
                   <p className="footer__content--text">
-                    <i className="fa fa-angle-double-right"></i> Quy Chế Hoạt Động
+                    <i className="fa fa-angle-double-right"></i> Quy Chế Hoạt
+                    Động
                   </p>
                   <p className="footer__content--text">
-                    <i className="fa fa-angle-double-right"></i> Chính sách Bảo Mật
+                    <i className="fa fa-angle-double-right"></i> Chính sách Bảo
+                    Mật
                   </p>
                 </div>
               </div>
@@ -50,7 +53,8 @@ export default function Footer(props) {
                     <i className="fa fa-angle-double-right"></i> Góp Ý
                   </p>
                   <p className="footer__content--text">
-                    <i className="fa fa-angle-double-right"></i> Sales & Services
+                    <i className="fa fa-angle-double-right"></i> Sales &
+                    Services
                   </p>
                   <p className="footer__content--text">
                     <i className="fa fa-angle-double-right"></i> Rạp / Giá vé
@@ -86,48 +90,123 @@ export default function Footer(props) {
                   <h3 className="footer__top--title">Kết nối g2 cinema</h3>
                 </div>
                 <div className="footer__social">
-                  <i className="fab fa-facebook-square footer__social--item social--1"></i>
-                  <i className="fab fa-youtube footer__social--item social--2"></i>
-                  <i className="fab fa-instagram footer__social--item social--3"></i>
-                  <i className="fab fa-twitter-square footer__social--item social--4"></i>
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-facebook-square footer__social--item social--1"></i>
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-youtube footer__social--item social--2"></i>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-instagram footer__social--item social--3"></i>
+                  </a>
+
+                  <a
+                    href="https://twitter.com/?lang=vi"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-twitter-square footer__social--item social--4"></i>
+                  </a>
                 </div>
                 <div className="footer__top">
                   <h3 className="footer__top--title">Đối Tác</h3>
                 </div>
                 <div className="footer__partner">
                   <p>
-                    <img src={f1} alt={f1} className="footer__partner--image"></img>
-                    <img src={f2} alt={f2} className="footer__partner--image"></img>
-                    <img src={f3} alt={f3} className="footer__partner--image"></img>
-                    <img src={f4} alt={f4} className="footer__partner--image"></img>
-                    <img src={f5} alt={f5} className="footer__partner--image"></img>
+                    <img
+                      src={f1}
+                      alt={f1}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f2}
+                      alt={f2}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f3}
+                      alt={f3}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f4}
+                      alt={f4}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f5}
+                      alt={f5}
+                      className="footer__partner--image"
+                    ></img>
                   </p>
                   <p>
-                    <img src={f6} alt={f6} className="footer__partner--image"></img>
-                    <img src={f7} alt={f7} className="footer__partner--image"></img>
-                    <img src={f8} alt={f8} className="footer__partner--image"></img>
-                    <img src={f9} alt={f9} className="footer__partner--image"></img>
-                    <img src={f10} alt={f10} className="footer__partner--image"></img>
+                    <img
+                      src={f6}
+                      alt={f6}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f7}
+                      alt={f7}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f8}
+                      alt={f8}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f9}
+                      alt={f9}
+                      className="footer__partner--image"
+                    ></img>
+                    <img
+                      src={f10}
+                      alt={f10}
+                      className="footer__partner--image"
+                    ></img>
                   </p>
                 </div>
               </div>
             </div>
-          </div>     
+          </div>
         </div>
         <hr></hr>
         <div className="footer__container container--1">
-            <div className="row">
-                <div className="col-md-12">
-                    <div className="footer__bottom">
-                        <img src={logoB} alt={logoB} className="footer__bottom--logo"></img>
-                        <span className="footer__bottom--address">
-                        Công ty cổ phần G2, Tầng 5, 112 Cao Thắng, Phường 4, Quận 3,
-                        TPHCM
-                        </span>
-                        <img src={f11} alt={f11} className="footer__bottom--permit"></img>
-                    </div>
-                </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="footer__bottom">
+                <img
+                  src={logoB}
+                  alt={logoB}
+                  className="footer__bottom--logo"
+                ></img>
+                <span className="footer__bottom--address">
+                  Công ty cổ phần G2, Tầng 5, 112 Cao Thắng, Phường 4, Quận 3,
+                  TPHCM
+                </span>
+                <img
+                  src={f11}
+                  alt={f11}
+                  className="footer__bottom--permit"
+                ></img>
+              </div>
             </div>
+          </div>
         </div>
       </footer>
     </>

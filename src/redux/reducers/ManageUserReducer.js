@@ -1,5 +1,8 @@
 import { USER_LOGIN } from "../../Util/config";
-import { POST_INFORMATION_ACCOUNT, POST_SIGN_IN } from "../constants/ManageUserConst";
+import {
+  POST_INFORMATION_ACCOUNT,
+  POST_SIGN_IN,
+} from "../constants/ManageUserConst";
 
 let userSignInStorage = {};
 
@@ -9,7 +12,7 @@ localStorage.getItem(USER_LOGIN)
 
 const stateInit = {
   informationUserSignIn: userSignInStorage,
-  informationAccount : {},
+  informationAccount: {},
 };
 
 const ManageUserReducer = (state = stateInit, action) => {
@@ -20,7 +23,7 @@ const ManageUserReducer = (state = stateInit, action) => {
       return { ...state };
     }
 
-    case POST_INFORMATION_ACCOUNT : {
+    case POST_INFORMATION_ACCOUNT: {
       state.informationAccount = action.payload;
 
       return { ...state };

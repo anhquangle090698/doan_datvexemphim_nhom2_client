@@ -48,7 +48,7 @@ export default function PromotionFilm1(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-12 col-lg-8">
             <div className="commentFilm__left">
               <div className="commentFilm__content">
                 <h3 className="commentFilm__content--title">
@@ -80,12 +80,17 @@ export default function PromotionFilm1(props) {
                     Đến Galaxy Cinema để được đắm chìm trong món bắp mới ngọt
                     ngào thơm hương Milo nào các Stars!
                   </p>
+                  <p className="line__text">
+                      <div style={{height : 200}}>
+
+                      </div>
+                  </p>
                 </div>
               </div>
               <div className="commentFilm__more">
                 <h3 className="commentFilm__more--title">Khuyến mãi khác</h3>
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={promotion4} alt={promotion4}></img>
                       <div className="item__overlay">
@@ -104,7 +109,7 @@ export default function PromotionFilm1(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={promotion5} alt={promotion5}></img>
                       <div className="item__overlay">
@@ -124,7 +129,7 @@ export default function PromotionFilm1(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={promotion6} alt={promotion6}></img>
                       <div className="item__overlay">
@@ -143,7 +148,7 @@ export default function PromotionFilm1(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={promotion7} alt={promotion7}></img>
                       <div className="item__overlay">
@@ -166,11 +171,11 @@ export default function PromotionFilm1(props) {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-12 col-lg-4">
             <div className="commentFilm__right">
               <div className="commentFilm__movies">
                 <h3 className="commentFilm__movies--title">Phim đang chiếu</h3>
-                <div className="group__moives">{renderFilmMore()}</div>
+                <div className="group__movies">{renderFilmMore()}</div>
                 <div className="commentFilm__movies--block">
                   <NavLink
                     to="/phim-dang-chieu"

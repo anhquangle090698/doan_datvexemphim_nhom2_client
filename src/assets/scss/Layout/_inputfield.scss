@@ -9,7 +9,7 @@
     height: 70px;
 
     .form__error {
-        @include styleText(#d72323, $fs-10 + 2, $fw-400);
+        @include styleText($color-red-0, $fs-12, $fw-400);
 
         position: relative;
 
@@ -21,8 +21,8 @@
         top: 17px;
         right: 0;
 
-        color: #d72323;
-        font-size: $fs-10 - 3 ;
+        color: $color-red-0;
+        font-size: $fs-10 - 3;
 
         width: 15px;
         height: 15px;
@@ -30,7 +30,7 @@
 
         text-align: center;
 
-        border: 1px solid #d72323;
+        border: 1px solid $color-red-0;
         border-radius: 50%;
     }
 
@@ -47,32 +47,6 @@
         cursor: pointer;
 
         z-index: 7;
-
-        &::after {
-            content: 'hiện mật khẩu';
-            position: absolute;
-            top: -40px;
-            right: -20px;
-            z-index: 1;
-
-            height: 45px;
-            width: 100px;
-
-            background-color: $color-blue-0;
-            color : $color-white-0;
-
-            visibility: hidden;
-            opacity: 0;
-
-            transition: all .3s ease-in-out;
-
-            clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 75% 60%, 65% 85%, 50% 60%, 0% 60%);
-        }
-
-        &:hover::after {
-            visibility: visible;
-            opacity: 1;
-        }
         
         &:hover {
             color : $color-blue-0;
@@ -80,7 +54,7 @@
     }
 
     .form__control {
-        @include styleText($color-black-2, $fs-12 + 2, $fw-400);
+        @include styleText($color-black-2, $fs-14, $fw-400);
         
         width: 100%;
         padding: $pd-10;
@@ -95,7 +69,7 @@
         transition: all .3s ease;
 
         &::placeholder {
-            @include styleText($color-gray-1, $fs-12 + 2, $fw-400);
+            @include styleText($color-gray-1, $fs-14, $fw-400);
 
             letter-spacing: .5px;
 
@@ -114,7 +88,7 @@
         }
 
         &.invalid {
-            border-bottom: 1.5px solid #d72323;
+            border-bottom: 1.5px solid $color-red-0;
         }
     }
 

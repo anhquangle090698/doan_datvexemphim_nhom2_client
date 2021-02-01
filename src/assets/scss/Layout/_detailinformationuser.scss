@@ -5,13 +5,14 @@
 
     margin: 80px auto 0;
     width: 80%;
-    padding: 70px 0;    
-    
+    padding: $pd-70 0;
+
     height: 100%;
 
     .information {
 
-        margin: $mg-30 0;
+        margin: $mg-30 auto;
+        width: 100%;
 
         .form__edit {
 
@@ -22,20 +23,24 @@
             width: 100%;
 
             .form__button--block {
+                position: relative;
                 width: 100%;
+
 
                 display: flex;
                 justify-content: flex-start;
 
+                margin-top: $mg-20;
+
                 .button__edit {
-                    @include styleButton(transparent, 5px, $pd-10, $pd-15);
+                    @include styleButton(transparent, $border-radius, $pd-10, $pd-15);
 
                     outline: none;
 
                     margin-top: $mg-5;
-                    
+
                     border: 1px solid $color-orange-1;
-                    color : $color-orange-1;
+                    color: $color-orange-1;
 
                     transition: all .3s;
 
@@ -44,8 +49,8 @@
 
                         color: $color-white-0;
                     }
-                }       
-                
+                }
+
                 .checkbox {
                     --background: #fff;
                     --border: #D1D6EE;
@@ -53,12 +58,14 @@
                     --border-active: #ff6f3c;
                     --tick: #ff6f3c;
                     position: relative;
+
                     input,
                     svg {
                         width: 21px;
                         height: 21px;
                         display: block;
                     }
+
                     input {
                         -webkit-appearance: none;
                         -moz-appearance: none;
@@ -72,14 +79,17 @@
                         border-radius: 4px;
                         transition: box-shadow .3s;
                         box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+
                         &:hover {
                             --s: 2px;
                             --b: var(--border-hover);
                         }
+
                         &:checked {
                             --b: var(--border-active);
                         }
                     }
+
                     svg {
                         pointer-events: none;
                         fill: none;
@@ -94,55 +104,68 @@
                         height: 21px;
                         transform: scale(var(--scale, 1)) translateZ(0);
                     }
+
                     &.path {
                         input {
                             &:checked {
                                 --s: 2px;
                                 transition-delay: .4s;
-                                & + svg {
+
+                                &+svg {
                                     --a: 16.1 86.12;
                                     --o: 102.22;
                                 }
                             }
                         }
+
                         svg {
                             stroke-dasharray: var(--a, 86.12);
                             stroke-dashoffset: var(--o, 86.12);
                             transition: stroke-dasharray .6s, stroke-dashoffset .6s;
                         }
                     }
+
                     &.bounce {
                         --stroke: var(--tick);
+
                         input {
                             &:checked {
                                 --s: 11px;
-                                & + svg {
+
+                                &+svg {
                                     animation: bounce .4s linear forwards .2s;
                                 }
                             }
                         }
+
                         svg {
                             --scale: 0;
                         }
                     }
                 }
-                
+
                 .checkbox__title {
-                    @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                    @include styleText($color-black-1, $fs-14, $fw-400);
 
                     margin-left: $mg-5;
                 }
-            } 
+            }
 
 
             .form__password--edit {
+                position: relative;
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
                 width: 100%;
 
                 display: none;
                 opacity: 0;
 
                 transition: all .4s;
-               
+
                 &.show {
                     display: block;
                     opacity: 1;
@@ -164,9 +187,11 @@
     50% {
         transform: scale(1.2);
     }
+
     75% {
         transform: scale(.9);
     }
+
     100% {
         transform: scale(1);
     }

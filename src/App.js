@@ -26,6 +26,7 @@ const DetailMovie = lazy(() => import('./Pages/ClientPages/DetailMovie'));
 const SignInUp = lazy(() => import('./Pages/ClientPages/SignInUp'));
 const TicketRoom = lazy(() => import('./Pages/ClientPages/TicketRoom'));
 const InformationUser = lazy(() => import('./Pages/ClientPages/CustomerInformation'));
+const SearchFilm = lazy(() => import('./Pages/ClientPages/SearchFilm'));
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/phim-dang-chieu" exact component={ShowingFilm}></Route>
+          <Route path="/tim-kiem-phim" exact component={SearchFilm}></Route>
           <Route path="/lich-chieu-:tenPhim/:maPhim" exact component={DetailMovie}></Route>
           <Route path="/dang-nhap" exact component={SignInUp}></Route>
           <Route path='/thong-tin-ca-nhan' exact component={InformationUser}></Route>

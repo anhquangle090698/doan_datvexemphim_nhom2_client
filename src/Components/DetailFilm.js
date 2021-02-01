@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../assets/scss/main.scss";
-import bg from "../assets/images/6fmig9liztj31.png";
+import bg from "../assets/images/bg_detail_movie.png";
 import moment from "moment";
 import { useDispatch } from "react-redux";
 import { handleLogicPopupAction } from "../redux/actions/ManageLogicReducerActions";

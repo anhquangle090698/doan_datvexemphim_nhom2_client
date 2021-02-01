@@ -4,9 +4,23 @@
     width: 100%;
     min-height: 100vh;
 
+    .ticketRoom__back {
+        position: relative;
+        top: 15px;
+        left: 30px;
+        
+        @include styleText($color-black-1, $fs-16, $fw-400);
+
+        transition: all .3s;
+
+        &:hover {
+            color: $color-orange-1;
+        }
+    }
+
     .ticket__chooseChair {
 
-        padding: 70px 0;
+        padding: $pd-70 0;
 
         .ticket__content {
             display: flex;
@@ -22,7 +36,7 @@
                 }
 
                 p {
-                    @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                    @include styleText($color-black-1, $fs-14, $fw-400);
 
                     font-style: italic;
                 }
@@ -226,13 +240,13 @@
                 }
 
                 .information__nameSystemCinema {
-                    @include styleText($color-black-0, $fs-12 + 2, $fw-400);
+                    @include styleText($color-black-0, $fs-14, $fw-400);
 
                     margin-top: $mg-20;
                 }
 
                 .information__daytime {
-                    @include styleText($color-black-0, $fs-12 + 2, $fw-400);
+                    @include styleText($color-black-0, $fs-14, $fw-400);
                 }
             }
         }
@@ -261,7 +275,7 @@
             }
 
             span {
-                @include styleText($color-black-0, $fs-12 + 2, $fw-400);
+                @include styleText($color-black-0, $fs-14, $fw-400);
 
                 margin-left: $mg-10;
             }
@@ -275,7 +289,7 @@
 
 
             .button__confirm {
-                @include styleButton($color-green-0, 8px, $pd-10, $pd-45);
+                @include styleButton($color-green-0, $border-radius + 3, $pd-10, $pd-45);
 
                 outline: none;
                 border: none;
@@ -297,7 +311,7 @@
         width: 100%;
         height: 100%;
 
-        background-color: rgba($color: #000000, $alpha: .5);
+        background-color: rgba($color: $color-black-0, $alpha: .5);
 
         .timeout__content {
             display: flex;
@@ -312,12 +326,12 @@
             border-radius: 5px;
 
             .timeout__title {
-                @include styleText($color-black-1, $fs-12 + 2, $fw-700);
+                @include styleText($color-black-1, $fs-14, $fw-700);
 
                 letter-spacing: .5px;
 
                 .timeout__rebook {
-                    @include styleText(#d72323, $fs-12 + 2, $fw-700);
+                    @include styleText($color-red-0, $fs-14, $fw-700);
                 }
             }
         }
@@ -332,7 +346,7 @@
         visibility: hidden;
 
         background: $color-white-0;
-        box-shadow: 0 -1px 0 0 #dadada, 0 1px 0 0 #dadada;
+        box-shadow: 0 -1px 0 0 $color-white-2, 0 1px 0 0 $color-white-2;
 
         .ticket__checkOutSmall--listChair {
             position: relative;
@@ -434,7 +448,7 @@
                     }
 
                     .ticket__diagram--character {
-                        font-size: $fs-12 + 2;
+                        font-size: $fs-14;
                         margin-right: $mg-10;
                         width: 10px;
                     }
@@ -539,11 +553,11 @@
                 .ticket__timer {
 
                     p {
-                        font-size: $fs-12 - 2;
+                        font-size: $fs-10;
                     }
 
                     h3 {
-                        font-size: 25px;
+                        font-size: $fs-20 + 5;
                     }
                 }
             }

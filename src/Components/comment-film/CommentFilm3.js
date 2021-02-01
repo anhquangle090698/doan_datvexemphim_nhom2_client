@@ -13,7 +13,7 @@ export default function CommentFilm3(props) {
   let { listFilm } = useSelector((state) => state.StateManageFilm);
 
   const renderFilmMore = () => {
-    return listFilm.slice(8, 11).map((film, index) => {
+    return listFilm.slice(9, 12).map((film, index) => {
       return (
         <div className="movie__item" key={index}>
           <img src={film.hinhAnh} alt={film.hinhAnh}></img>
@@ -49,7 +49,7 @@ export default function CommentFilm3(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-12 col-lg-8">
             <div className="commentFilm__left">
               <div className="commentFilm__content">
                 <h3 className="commentFilm__content--title">
@@ -219,7 +219,7 @@ export default function CommentFilm3(props) {
               <div className="commentFilm__more">
                 <h3 className="commentFilm__more--title">Bình luận phim</h3>
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={news1} alt={news1}></img>
                       <div className="item__overlay">
@@ -239,7 +239,7 @@ export default function CommentFilm3(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={news2} alt={news2}></img>
                       <div className="item__overlay">
@@ -259,7 +259,7 @@ export default function CommentFilm3(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={news3} alt={news3}></img>
                       <div className="item__overlay">
@@ -278,7 +278,7 @@ export default function CommentFilm3(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-6 col-lg-3">
                     <div className="commentFilm__more--item">
                       <img src={news4} alt={news4}></img>
                       <div className="item__overlay">
@@ -299,11 +299,11 @@ export default function CommentFilm3(props) {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-12 col-lg-4">
             <div className="commentFilm__right">
               <div className="commentFilm__movies">
                 <h3 className="commentFilm__movies--title">Phim đang chiếu</h3>
-                <div className="group__moives">{renderFilmMore()}</div>
+                <div className="group__movies">{renderFilmMore()}</div>
                 <div className="commentFilm__movies--block">
                   <NavLink
                     to="/phim-dang-chieu"

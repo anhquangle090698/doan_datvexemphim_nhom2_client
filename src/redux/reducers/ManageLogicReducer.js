@@ -1,40 +1,42 @@
-import { HANDLE_LOGIC_POPUP_CLOSE, HANDLE_LOGIC_POPUP_OPEN } from "../constants/ManageLogicConst";
+import {
+  HANDLE_LOGIC_POPUP_CLOSE,
+  HANDLE_LOGIC_POPUP_OPEN,
+} from "../constants/ManageLogicConst";
 
 const stateInit = {
-    popup : {
-        srcVideo : '',
-        active : '',
+  popup: {
+    srcVideo: "",
+    active: "",
+  },
+};
+
+const ManageLogicReducer = (state = stateInit, action) => {
+  switch (action.type) {
+    case HANDLE_LOGIC_POPUP_OPEN: {
+      let popupUpdate = { ...state.popup };
+
+      popupUpdate.srcVideo = action.srcVideo;
+      popupUpdate.active = action.active;
+
+      state.popup = popupUpdate;
+
+      return { ...state };
     }
-}
 
-const ManageLogicReducer = ( state = stateInit, action ) => {
+    case HANDLE_LOGIC_POPUP_CLOSE: {
+      let popupUpdate = { ...state.popup };
 
-    switch (action.type) {
-        case HANDLE_LOGIC_POPUP_OPEN : {
-            let popupUpdate = { ...state.popup };
+      popupUpdate.srcVideo = "";
+      popupUpdate.active = "";
 
-            popupUpdate.srcVideo = action.srcVideo;
-            popupUpdate.active = action.active;
+      state.popup = popupUpdate;
 
-            state.popup = popupUpdate;
-
-            return { ...state };
-        }
-
-        case HANDLE_LOGIC_POPUP_CLOSE : {
-            let popupUpdate = { ...state.popup };
-
-            popupUpdate.srcVideo = '';
-            popupUpdate.active = '';
-
-            state.popup = popupUpdate;
-
-            return { ...state };
-        }
-            
-        default: 
-            return { ...state };
+      return { ...state };
     }
-}
+
+    default:
+      return { ...state };
+  }
+};
 
 export default ManageLogicReducer;

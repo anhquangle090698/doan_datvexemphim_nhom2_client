@@ -57,7 +57,7 @@
                 height: 100%;
 
 
-                border-radius: 5px;
+                border-radius: $border-radius;
 
                 object-fit: cover;
             }
@@ -101,7 +101,7 @@
                 }
 
                 .promotion__overlay--text {
-                    @include styleText($color-white-0, $fs-12 + 2, $fw-400);
+                    @include styleText($color-white-0, $fs-14, $fw-400);
 
                     margin-top: $mg-30 + 5;
 
@@ -121,7 +121,7 @@
                 }
 
                 .promotion__overlay--button {
-                    @include styleButton(transparent, 4px, $pd-10, $pd-20 + 5);
+                    @include styleButton(transparent, $border-radius - 1, $pd-10, $pd-20 + 5);
 
                     outline: none;
                     border: none;
@@ -160,7 +160,7 @@
         padding: 0 $pd-10;
 
         .promotion__about--text {
-            @include styleText($color-black-2, $fs-16 - 2, $fw-400);
+            @include styleText($color-black-2, $fs-14, $fw-400);
 
             line-height: $line-height;
 

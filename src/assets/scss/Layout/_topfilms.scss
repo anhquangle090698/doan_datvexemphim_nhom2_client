@@ -12,7 +12,7 @@
         width: 65%;
         margin: $mg-30 auto;
 
-        padding: 50px 0;
+        padding: $pd-45 + 5 0;
 
         .topFilm__top {
 
@@ -84,7 +84,7 @@
 
                 background-color: rgba($color: $color-black-0, $alpha: .7);
 
-                border-radius: 5px;
+                border-radius: $border-radius;
 
                 visibility: hidden;
                 transition: all .3s;

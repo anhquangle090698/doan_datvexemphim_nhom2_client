@@ -13,7 +13,7 @@
         margin-bottom: $mg-30;
 
         .commentFilm__breadcrumb--item {
-            @include styleText($color-gray-1, $fs-12 + 2, $fw-400);
+            @include styleText($color-gray-1, $fs-14, $fw-400);
 
             margin-right: $mg-5;
 
@@ -27,7 +27,7 @@
         .commentFilm__breadcrumb--item {
 
             &.active {
-                @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                @include styleText($color-black-1, $fs-14, $fw-400);
             }
 
             margin-left: $mg-5;
@@ -47,7 +47,7 @@
             .commentFilm__content--title {
                 @include styleText($color-black-1, $fs-30, $fw-400);
 
-                letter-spacing: 1px;
+                letter-spacing: $letter-spacing;
                 line-height: 1.2;
             }
 
@@ -56,7 +56,7 @@
                 margin-top: $mg-30;
 
                 .line__text {
-                    @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                    @include styleText($color-black-1, $fs-14, $fw-400);
 
                     line-height: 1.8;
 
@@ -117,6 +117,8 @@
 
         .commentFilm__more {
 
+            margin: 0 auto;
+
             .commentFilm__more--title {
                 @include styleText($color-black-1, $fs-20, $fw-400);
 
@@ -142,10 +144,10 @@
 
                 position: relative;
 
-                width: 250px;
-                height: 320px;
+                width: 200px;
+                height: 300px;
 
-                padding: $pd-10 $pd-45 $pd-10 0;
+                padding: $pd-10 $pd-30 $pd-10 0;
 
 
                 img {
@@ -164,7 +166,7 @@
                     top: 8px;
                     left: 0;
 
-                    width: 82%;
+                    width: 85%;
                     height: 95%;
 
                     padding: $pd-20;
@@ -179,7 +181,7 @@
                     transition: all .3s;
 
                     .item__overlay--title {
-                        @include styleText($color-white-0, $fs-12 + 2, $fw-400);
+                        @include styleText($color-white-0, $fs-14, $fw-400);
 
                         text-transform: uppercase;
 
@@ -259,7 +261,7 @@
                 }
             }
 
-            .group__moives {
+            .group__movies {
 
                 .movie__item {
 
@@ -301,7 +303,7 @@
                         transition: all .3s;
 
                         .movie__item--button {
-                            @include styleButton(transparent, 4px, $pd-10, $pd-20 + 5);
+                            @include styleButton(transparent, $border-radius, $pd-10, $pd-20 + 5);
 
                             outline: none;
                             border: none;
@@ -346,7 +348,7 @@
                     position: absolute;
                     right: 15%;
 
-                    @include styleButton($color-white-0, 5px, $pd-10, $pd-15);
+                    @include styleButton($color-white-0, $border-radius, $pd-10, $pd-15);
 
                     color: $color-orange-1;
                     border: 1px solid $color-orange-1;
@@ -401,5 +403,143 @@
     100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
+    }
+}
+
+//Responsive
+
+.commentFilm {
+
+    @include responsive("extra") {
+
+        width: 80%;
+        margin: 0 auto;
+
+        .commentFilm__left {
+            .commentFilm__more {
+                .commentFilm__more--item {
+                    width: 180px;
+                    height: 250px;
+    
+                    padding: $pd-10 $pd-20 $pd-10 0;
+                    
+                    .item__overlay {
+                        width: 90%;
+                        height: 93%;
+
+                        .item__overlay--button {
+                            padding: $pd-5 $pd-15;
+
+                            left: 22%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .commentFilm__right {
+
+            .commentFilm__movies {
+                .group__movies {
+                    .movie__item {
+                        
+                        width: 350px;
+                        height: 230px;
+    
+                        margin: $mg-70 0;
+                        
+                    }
+                }
+            }       
+            
+        }
+    }
+
+    @include responsive("extra-large") {
+
+        width: 80%;
+        margin: 0 auto;
+
+        .commentFilm__left {
+            .commentFilm__more {
+                .commentFilm__more--item {
+                    width: 150px;
+                    height: 230px;
+    
+                    padding: $pd-10 $pd-30 $pd-10 0;
+                    
+                    .item__overlay {
+                        width: 80%;
+                        height: 93%;
+
+                        .item__overlay--title {
+                            font-size: $fs-12;
+                        }
+
+                        .item__overlay--button {
+                            padding: $pd-5 $pd-10;
+
+                            left: 18%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .commentFilm__right {
+
+            .commentFilm__movies {
+                .group__movies {
+                    .movie__item {
+                        
+                        width: 300px;
+                        height: 200px;
+    
+                        margin: $mg-70 0;
+    
+                    }
+                }
+            }       
+            
+        }
+    }
+
+    @include responsive("large") {
+
+        width: 80%;
+        margin: 0 auto;
+
+        .commentFilm__left {
+            .commentFilm__more {
+                .commentFilm__more--item {
+                    width: 250px;
+                    height: 350px;
+    
+                    padding: $pd-10 $pd-30 $pd-10 0;
+                    
+                    .item__overlay {
+                        width: 88%;
+                        height: 95%;
+
+                        .item__overlay--title {
+                            font-size: $fs-16;
+                        }
+
+                        .item__overlay--button {
+                            padding: $pd-10 $pd-20;
+
+                            left: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .commentFilm__right {
+
+            display: none;
+            visibility: hidden;
+            
+        }
     }
 }

@@ -23,6 +23,18 @@ export default function Home(props) {
     (state) => state.StateManageUser
   );
 
+  useEffect(() => {
+    const fetchDataSCinema = async () => {
+      dispatch(
+        await postInformationAccountApiAction({
+          taiKhoan: informationUserSignIn.taiKhoan,
+        })
+      );
+    };
+
+    fetchDataSCinema();
+  }, []);
+
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -62,17 +74,7 @@ export default function Home(props) {
     fetchDataShowTimes();
   }, []);
 
-  useEffect(() => {
-    const fetchDataSCinema = async () => {
-      dispatch(
-        await postInformationAccountApiAction({
-          taiKhoan: informationUserSignIn.taiKhoan,
-        })
-      );
-    };
-
-    fetchDataSCinema();
-  }, []);
+  
 
   return (
     <>

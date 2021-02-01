@@ -79,10 +79,6 @@ export const putUpdateUserApiAction = async (editInformationUser) => {
           }
         });
 
-        // dispatch(await postInformationAccountApiAction({
-        //   taiKhoan: result.data.taiKhoan,
-        // }));
-
         dispatch(await postInformationAccountAction(result.data));
 
         Swal.fire({

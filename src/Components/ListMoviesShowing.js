@@ -7,6 +7,8 @@ export default function ListMoviesShowing(props) {
 
     let { listFilm } = useSelector(state => state.StateManageFilm);
 
+    
+
     const renderListFilmShowing = () => {
         return listFilm.map((film, index) => {
           return <div className="col-sm-6 col-md-3" key={index}>

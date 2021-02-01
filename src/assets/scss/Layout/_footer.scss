@@ -7,7 +7,7 @@
     width: 100%;
 
 
-    margin: 50px 0;
+    margin: $mg-50 0;
 
 
     hr {
@@ -60,7 +60,7 @@
         .footer__content {
 
             .footer__content--text {
-                @include styleText($color-gray-3, $fs-12 + 2, $fw-400);
+                @include styleText($color-gray-3, $fs-14, $fw-400);
 
                 margin: $mg-20 0;
 
@@ -168,7 +168,7 @@
             .footer__bottom--address {
 
 
-                @include styleText($color-gray-3, $fs-16 - 2, $fw-400);
+                @include styleText($color-gray-3, $fs-14, $fw-400);
 
                 letter-spacing: 1px;
                 font-style: italic;

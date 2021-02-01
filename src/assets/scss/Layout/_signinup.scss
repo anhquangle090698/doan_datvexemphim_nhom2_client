@@ -98,7 +98,7 @@
             }
     
             p {
-                @include styleText($color-black-1, $fs-12 + 2, $fw-400);
+                @include styleText($color-black-1, $fs-14, $fw-400);
     
                 letter-spacing: 1px;
                 line-height: 30px;
@@ -183,16 +183,16 @@
                         }
 
                         .signUp__social--facebook:hover {
-                            color: #373a6d;
-                            border-color: #373a6d;
+                            color: $color-blue-0;
+                            border-color: $color-blue-0;
                         }
                         .signUp__social--google:hover {
-                            color: #d72323;
-                            border-color: #d72323;
+                            color: $color-red-0;
+                            border-color: $color-red-0;
                         }
                         .signUp__social--linked:hover {
-                            color: #1da1f2;
-                            border-color: #1da1f2;
+                            color: $color-blue-1;
+                            border-color: $color-blue-1;
                         }
                     }
 

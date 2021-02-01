@@ -1,6 +1,7 @@
 //variable color
 $color-white-0 : #fff;
 $color-white-1 : #e5e5e5;
+$color-white-2 : #dadada;
 $color-black-0 : #000;
 $color-black-1 : #222;
 $color-black-2 : #333;
@@ -12,11 +13,19 @@ $color-orange-1 :  #ff6f3c;
 $color-orange-2 :  #ff5722;
 
 $color-blue-0 : #373a6d;
+$color-blue-1 : #1da1f2;
 $color-green-0 : #009975;
+$color-red-0 : #d72323;
+$color-yellow-0 : #ffd615;
+$color-yellow-1 : #ffd717;
+$color-yellow-2 : #ffde25;
+$color-yellow-3 : #fffeb8;
+
 
 //Variable font-size
 $fs-10 : 10px;
 $fs-12 : 12px;
+$fs-14 : 14px;
 $fs-16 : 16px;
 $fs-20 : 20px;
 $fs-30 : 30px;
@@ -34,6 +43,8 @@ $mg-10 : 10px;
 $mg-15 : 15px;
 $mg-20 : 20px;
 $mg-30 : 30px;
+$mg-50 : 50px;
+$mg-70 : 70px;
 
 //Variable padding
 
@@ -44,9 +55,16 @@ $pd-20 : 20px;
 $pd-30 : 30px;
 $pd-40 : 40px;
 $pd-45 : 45px;
+$pd-70 : 70px;
 
 //Variable line-height
 $line-height : 1.5rem;
+
+//Variable letter-spacing
+$letter-spacing : 1px;
+
+//Variable border-radius
+$border-radius : 5px;
 
 //break points
 $breakpoints:(

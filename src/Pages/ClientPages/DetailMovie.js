@@ -7,6 +7,7 @@ import Popup from "../../Components/Popup";
 import LoadingPage from "../../Components/LoadingPage";
 import ScrollToTop from "../../Components/ScrollToTop";
 import { getDetailMovieByIdFilmApiAction } from "../../redux/actions/ManageFilmReducerActions";
+import { postInformationAccountApiAction } from "../../redux/actions/ManageUserReducerAction";
 
 export default function DetailMovie(props) {
   const { detailMovie } = useSelector((state) => state.StateManageFilm);
@@ -23,6 +24,22 @@ export default function DetailMovie(props) {
     };
 
     fetchDataDetailFilm();
+  }, []);
+
+  const { informationUserSignIn } = useSelector(
+    (state) => state.StateManageUser
+  );
+
+  useEffect(() => {
+    const fetchDataSCinema = async () => {
+      dispatch(
+        await postInformationAccountApiAction({
+          taiKhoan: informationUserSignIn.taiKhoan,
+        })
+      );
+    };
+
+    fetchDataSCinema();
   }, []);
 
   useEffect(() => {
